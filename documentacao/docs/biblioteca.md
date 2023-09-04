@@ -42,10 +42,7 @@ O documento que regeu o manifesto ágil possui 12 princípios.
     Compreender o processo em que está o desenvolvimento do software, assim como velocidade e dinamismo da equipe e cada um dos seus membros. Em conversas francas e dinâmicas de grupo.
 
 
-![imagem](./imgs/scrum.jpg)
-
-
-
+Referências - [AWS](https://aws.amazon.com/pt/what-is/scrum/#:~:text=adotar%20o%20DevOps%3F-,O%20que%20%C3%A9%20o%20Scrum%3F,uma%20entrega%20eficiente%20de%20projetos.)
 
 ## Pull Request e Code Review. Como fazer boas constribuições?
 
