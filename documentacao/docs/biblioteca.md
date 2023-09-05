@@ -44,6 +44,120 @@ O documento que regeu o manifesto ágil possui 12 princípios.
 
 Referências - [AWS](https://aws.amazon.com/pt/what-is/scrum/#:~:text=adotar%20o%20DevOps%3F-,O%20que%20%C3%A9%20o%20Scrum%3F,uma%20entrega%20eficiente%20de%20projetos.)
 
+
+## Como fazer o pull request no local correto.
+
+Devido a orientação do professor, não vamos poder commitar na MAIN. 
+Dessa forma, vamos fazer uma branch por sprint.
+Nossa primeira sprint vai ter a branch.
+
+```
+
+S-01/main-primeira-sprint
+
+```
+
+### Como se fosse a primeira vez: configurando upstream
+
+a) Conectando o repositório original na upstream
+
+É preciso entender que seu código habitará, em pelo menos, três arquivos. 
+- Na sua máquina, chamada de local.
+- No seu repositório remoto. Seu fork.
+- No repositório original, upstream
+
+Para que todos tenham as modificações de todos, o caminho para puxar atualizações sempre será upstream > fork > repositório local.
+
+Avô -> pai -> filho. 
+
+Não é uma boa ideia puxar modificações de avô direto para filho, tá!
+
+No seu repositório local, será necessário indicar quem será a upstream, ou seja, a upstream é a ligação direta com projeto original.
+
+```
+git remote add upstream https://github.com/ClaraSantosmf/FATEC-API-1-SEMESTRE
+```
+
+Agora seu repositório está dessa forma. 
+
+![Alt text](image-1.png)
+
+git push e git pull enviarão as modificações para seu fork. 
+git pull upstream vai trazer as informações do repositório original.
+
+Mas por que não posso fazer git push upstream? Porque upstream não autoriza pull de repositório original. 
+
+Agora, com o comando para listar os nomes das branchs da upstream.
+
+```
+git ls-remote 
+```
+
+Deve haver um retorno desse estilo
+
+![Alt text](image-2.png)
+
+A partir disso, vamos criar uma branch que será sincronizada direta com a upstream. 
+
+
+Como você já sabe, nossa primeira sprint será a partir da S-01/main-primeira-sprint
+
+
+ b) criando sua branch para copiar a upstream. 
+
+Você não deve fazer alterações direto na upstream, então vamos copia-la!
+
+
+```
+git switch -c S-01/main-primeira-sprint
+```
+
+O que isso faz? Cria uma nova branch local chamada S-01/main-primeira-sprint. Faz o checkout daquela branch. Faz o pull das alterações de origin/S-01/main-primeira-sprint para aquela branch
+
+c) Puxando alterações da upstream. 
+
+Agora você deve puxar as atualizações da upstream. 
+
+```
+git pull upstream S-01/main-primeira-sprint
+
+```
+
+Agora sua branch trará todas as atualização dessa branch da upstream. É a partir dessa branch atualizada, que você deve criar suas branchs!
+
+
+### Depois de ter branch s-01 criada!
+
+Entrou para trabalhar e precisa puxar atualizações dos colegas? Simples. 
+
+No terminal, mude para branch 
+
+```
+git switch S-01/main-primeira-sprint
+```
+
+Rode o comando para trazer as atualizações.
+
+```
+git pull upstream S-01/main-primeira-sprint
+
+```
+
+Agora mude para sua branch de trabalho. Vou usar a minha como exemplo que é a branch "Santos/implementando-WSGI"
+
+```
+git switch Santos/implementandoW-WSGI
+```
+
+E agora o comando de mergear (misturar atualizações com seu código)
+
+```
+git merge S-01/main-primeira-sprint
+```
+
+Tudo certo e nada errado! Você tem uma branch na sua última versão. 
+
+
 ## Pull Request e Code Review. Como fazer boas constribuições?
 
 Passos para contribuir:
