@@ -1,50 +1,3 @@
-
-## Metodológias ágeis - scrum
-
-### Manifesto Ágil
-
-O documento que regeu o manifesto ágil possui 12 princípios.
-
- 1. **Maior prioridade**
-    A satisfação do cliente somados as entregas parciais e contínuas do software, de forma adianta e com valor agredado. Não há foco em documentações rígidas, e sim na iteração constante com o cliente.
-
-2. **Mudanças são bem vindas.**
-    O início do desenvolvimento de software é dificil identificar todos os requisitos. O software precisa amadurecer e o cliente muitas vezes não consegue prever todas as suas necessidades antes de ter uma versão funcional do software. O método ágil adota a filosofia de que mudanças feitas mais tarde no processo não são prejudiciais. Além dissotodas as mudanças que contribuem para a melhoria do software dentro das necessidades do cliente são bem-vindas.
-
-3. **Entregas frequentes**
-    As entregas devem ser frequentes, de funcionalidades que estejam usáveis no ideal do MVP (mínimo produto viável).Periodicidade de tempo de entregas rápidas dão um ritmo ao trabalho da equipe de desenvolvimento. Atrasos de entrega constantem denúnciam a falência dos prazos.
-
-4. **Equipe única de negócios e desenvolvedores**
-    Um dos princípios da abordagem ágil é ter uma equipe única de negócios e desenvolvedores, pois o trabalho conjunto das pessoas de negócio com os desenvolvedores é importante para manter a mesma comunicação durante todo o projeto. Portanto, PO e SM codam também.
-
-5. **Motivação**
-    Equipe motivada é sinal de qualidade no proeto. É necessário que haja uma confiança na equipe para o desenvolvimento do trabalho que precisa ser realizado. Na abordagem ágil as equipes ágeis são autogerenciadas, com uma comunicação direta e constante com feedbacks frequentes com o comprometimento de todos os envolvidos para a entrega.
-
-6. **Conversa frente a frente.**
-    Um dos princípios do manifesto ágil é a conversa frente a frente, face a face, presencial. É um método eficiente e eficaz para a transmissão de qualquer informação para a equipe e entre as equipes de desenvolvimento do software.. Os feedbacks devem ser diretos e na cara.
-
-7. **Software Funcional**
-    É preciso garantir enregas ao fim da sprint. Um dos princípios do manifesto ágil é a entrega de um software funcional em várias etapas até a entrega do projeto final do software que está sendo desenvolvido.
-
-8. **Desenvolvimento sustentável**
-    Para garantir um desenvolvimento sustentável no método ágil, é importante evitar a produtividade por horas de trabalho, o que cansa o desenvolvedor, porém, valorizando a produtividade pela capacidade criativa na execução.
-
-9. **Agilidade**
-    É importante direcionar a atenção às necessidades de mudança e evitar documentações extensas.
-
-10. **Simplicidade**
-    Criação e a entrega de um software de qualidade que resolve as necessidades do cliente. Isso é realmente essencial? É possível torná-lo simples? As respostas de perguntas como essas direcionam o desenvolvimento do software para a sua simplicidade.
-
-11. **Times Auto Organizáveis**
-    Buscar por um conjunto restrito e muito simples de regras que deve ser obedecido por todos os membros da equipe.
-    
-12. **Reflexões regulares**
-    Compreender o processo em que está o desenvolvimento do software, assim como velocidade e dinamismo da equipe e cada um dos seus membros. Em conversas francas e dinâmicas de grupo.
-
-
-Referências - [AWS](https://aws.amazon.com/pt/what-is/scrum/#:~:text=adotar%20o%20DevOps%3F-,O%20que%20%C3%A9%20o%20Scrum%3F,uma%20entrega%20eficiente%20de%20projetos.)
-
-
 ## Como fazer o pull request no local correto.
 
 Devido a orientação do professor, não vamos poder commitar na MAIN. 
@@ -259,3 +212,55 @@ Ao revisar um código, é bom (para o autor e para o revisor) ter um checklist d
 - [Code Review Guidelines for Humans](https://phauer.com/2018/code-review-guidelines/)
 - [How to Make Good Code Reviews Better - Stack Overflow Blog](https://stackoverflow.blog/2019/09/30/how-to-make-good-code-reviews-better/)
 - [Boas práticas de reviews](https://google.github.io/eng-practices/review/)
+
+
+## Como configurar o projeto?
+
+Precisamos rodar nosso projeto na nossa máquina! Nisso, vamos configura-la de forma a conseguir exercutar o PBLTeX!
+
+### Virtualenvs
+A maneira mais fácil de todos terem as mesmas configurações do projeto na máquina é por meio de uma virtualenv. 
+
+> Aplicações em Python normalmente usam pacotes e módulos que não vêm como parte da instalação padrão. Aplicações às vezes necessitam uma versão específica de uma biblioteca, porque ela requer que algum problema em particular tenha sido consertado ou foi escrita utilizando-se de uma versão obsoleta da interface da biblioteca. A solução para este problema é criar um ambiente virtual, uma árvore de diretórios que contém uma instalação Python para uma versão particular do Python, além de uma série de pacotes adicionais. [Virtualenvs - docs](https://docs.python.org/pt-br/3/tutorial/venv.html)
+
+
+#### Instale o pyenv
+
+ Use o pyenv para gerenciar as versões de Python e seus virtualenvs. Para instalar ele, use o [pyenv-installer](https://github.com/pyenv/pyenv-installer). No repositório tem as instruções detalhadas, mas talvez seja só isso aqui:
+
+```shell
+curl https://pyenv.run | bash
+```
+
+Reinicie o terminal e você já deve conseguir usar o pyenv.
+
+```
+# Instale uma versão do 3.11.x.
+pyenv install 3.11.0
+# Crie um virtualenv buser com a versão que você acabou de instalar.
+pyenv virtualenv 3.11.0 PBLTeX
+```
+
+O arquivo `.python-version` já diz para o `pyenv` usar o env `PBLTeX` quando estiver na pasta do projeto.
+Ou seja, nosso ambiente vai ser sempre ativado automaticamente. Mas caso precise ativa-lo, sempre que quiser, pode fazer:
+  ```
+pyenv activate PBLTeX
+  ```
+
+Instale as dependências com os seguintes comandos:
+
+```shell
+pip install -r requirements.txt
+```
+
+Rode o projeto com:
+
+```
+python3 wgsi.py
+
+```
+Nesse momento, nosso servidor está fornecendo informações na porta :8080
+
+Porém, nosso frontend estará na porta:5500
+Então, para olhar o backend : http://127.0.0.1:8080/
+Para olhar para o frontend http://127.0.0.1:5500/
