@@ -18,6 +18,7 @@ Para visitar como ela funciona, você pode visitar essa doc!
     * [Depois de ter branch s-01 criada!](biblioteca.md#depois-de-ter-branch-s-01-criada)
 - Configurações do projeto. Como consigo rodar esse projeto na minha máquina?
     * [Virtualenvs](biblioteca.md#virtualenvs)
+    * [Instale o pyenv](biblioteca.md#instale-o-pyenv)
 
 ## Metodológias ágeis - scrum
 
