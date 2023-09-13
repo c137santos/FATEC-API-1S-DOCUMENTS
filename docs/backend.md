@@ -36,3 +36,4 @@ O código de status da resposta indica o resultado da solicitação. Por exemplo
 
 Os cabeçalhos da resposta fornecem informações adicionais sobre a resposta. Por exemplo, o cabeçalho Content-Type indica o tipo de conteúdo da resposta.
 
+É importante entender o que são as classes HTTPRequest, JesonResponse e HttpResponse. Pois elas serão usadas nas nossas funcoes_request_response.
