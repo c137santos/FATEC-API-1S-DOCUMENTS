@@ -13,9 +13,11 @@ Para visitar como ela funciona, você pode visitar essa doc!
 ## O que você vai encontrar nessa documentação?
 
 - Git e github. Como você pode puxar atualizações e commitar no local correto?
-    * Como fazer o pull request no local correto.
-    * Como se fosse a primeira vez: configurando upstream
+    * [Como fazer o pull request no local correto.](biblioteca.md#como-fazer-o-pull-request-no-local-correto)
+    * [Como se fosse a primeira vez: configurando upstream](biblioteca.md#como-se-fosse-a-primeira-vez-configurando-upstream)
+    * [Depois de ter branch s-01 criada!](biblioteca.md#depois-de-ter-branch-s-01-criada)
 - Configurações do projeto. Como consigo rodar esse projeto na minha máquina?
+    * [Virtualenvs](biblioteca.md#virtualenvs)
 
 ## Metodológias ágeis - scrum
 

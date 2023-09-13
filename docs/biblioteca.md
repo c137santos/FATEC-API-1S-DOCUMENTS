@@ -243,9 +243,11 @@ pyenv virtualenv 3.11.0 PBLTeX
 
 O arquivo `.python-version` já diz para o `pyenv` usar o env `PBLTeX` quando estiver na pasta do projeto.
 Ou seja, nosso ambiente vai ser sempre ativado automaticamente. Mas caso precise ativa-lo, sempre que quiser, pode fazer:
-  ```
+
+
+```
 pyenv activate PBLTeX
-  ```
+```
 
 Instale as dependências com os seguintes comandos:
 
