@@ -3,6 +3,7 @@ nav:
   - Home: index.md
   - Biblioteca: biblioteca.md
   - Backend: backend.md
+  - Sprints: sprints.md
 theme:
   name: mkdocs
   nav_style: dark
