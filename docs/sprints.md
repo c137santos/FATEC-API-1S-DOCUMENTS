@@ -1,5 +1,5 @@
-# 				BACKLOG API 1 SEMESTRE
-### Épicos
+# BACKLOG API 1 SEMESTRE
+## Épicos
 
 - **Exportação de Dados (Back-end)**: A consolidação e exportação de dados costumam ser tarefas realizadas no back-end, pois envolvem o processamento e a preparação de dados para exportação.
 - Gerenciamento de Turmas (curso) : Esse épico está relacionado à criação, atualização e visualização de turmas, que envolvem a interface do usuário para realizar essas operações.
@@ -11,7 +11,7 @@
 - Importação de Dados massivo (Back-end): A tarefa de carregar informações de alunos e scores a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.
 
 
-#### Detalhamento dos Épicos
+### Detalhamento dos Épicos
 
 Épico 1: Exportação de Dados
 História de Usuário 1: Como um administrador, eu quero selecionar as opções de gerenciamento e relatórios. Isso envolve a exportação de dados. 
@@ -203,9 +203,9 @@ Rotas de API:
 /api/carregamento: Manipula o carregamento de dados a partir de arquivos.
 
 
-### Persistência de dados
+# <center> Persistência de dados
 
-# <center> Relação de entidades:
+### <center> Relação de entidades:
 ![Alt text](image-6.png)
 
 Por exemplo, os alunos:
@@ -281,7 +281,7 @@ notas (array de números): Lista de notas obtidas pelo aluno no curso e turma es
 ffe (nulo ou qualquer outro valor): Média das notas.
  
  
-# <center> **BACKLOG API (2 SPRINT):**
+## <center> **BACKLOG API (2º SPRINT):**
  
 ### **Épico 1: Gerenciamento de turma:**
 
