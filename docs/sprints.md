@@ -1,5 +1,5 @@
 # <center> Relação de entidades:
-![Alt text](image-6.png)
+![Alt text](image-7.png)
 
 ```python
 {

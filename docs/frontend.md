@@ -2,7 +2,7 @@
 
 Para dar noção do nosso projeto, nós desenhamos todas as telas que imaginamos ser necessárias a partir do nosso backlog inicial e os requisitos. 
 
-![Alt text](image-5.png)
+![Alt text](image-7.png)
 
 Épico 1: Exportação de Dados
 
