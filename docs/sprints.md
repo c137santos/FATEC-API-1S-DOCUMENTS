@@ -12,7 +12,7 @@
 - Importação de Dados massivo (Back-end): A tarefa de carregar informações de alunos e scores a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.
 
 
-### Detalhamento dos Épicos
+## Detalhamento dos Épicos
 
 Épico 1: Exportação de Dados
 História de Usuário 1: Como um administrador, eu quero selecionar as opções de gerenciamento e relatórios. Isso envolve a exportação de dados. 
