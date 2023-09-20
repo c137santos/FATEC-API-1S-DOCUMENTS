@@ -1,4 +1,4 @@
-# Aqui vamos discutir e explicar nosso frontend!
+<h1> Aqui vamos discutir e explicar nosso frontend!</h1> 
 
 Para dar noção do nosso projeto, nós desenhamos todas as telas que imaginamos ser necessárias a partir do nosso backlog inicial e os requisitos. 
 
