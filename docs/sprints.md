@@ -1,5 +1,93 @@
-# <center> Relação de entidades:
+# <center> Relação de entidades
+**<p style="text-align:center;">Relação de Entidades</p>**
 ![Alt text](image-6.png)
+
+
+Nessa relação temos que um **aluno** pode estar matriculado em **diferentes** cursos, o **aluno mateus** tem **duas listas de notas, uma para cada curso matriculado**.
+
+Dessa forma será possível fazer a média e adquirir estatísticas de notas de diferentes cursos e turmas.
+
+## <center> Tabelas de banco de dados:
+**1. Dados de Cursos:**
+
+cursos (array): Contém informações sobre os cursos disponíveis.  </p>
+id (inteiro): ID único do curso. </p>
+nome_curso (string): Nome do curso.</p>
+professor (string): Nome do professor responsável pelo curso.</p>
+qtd_sprint (inteiro): Quantidade de sprints associadas ao curso.</p>
+turmas (array de inteiros): IDs das turmas relacionadas ao curso.</p>
+
+**2. Dados de Turmas:**
+
+turmas (array): Contém informações sobre as turmas.</p>
+id (int): ID único da turma.</p>
+id_curso (inteiro): ID do curso ao qual a turma está associada.</p>
+nome_turma (string): Nome da turma.</p>
+
+
+```python
+{
+	"turmas" : [
+		{
+			"id" : 1,
+			"id_curso" : 1,
+			"nome_turma" : "Turma A"
+		},
+		[
+			"id" : 2,
+			"id_curso" : 2,
+			"nome_turma" : "Turma A"
+		]
+	]
+
+}
+
+```
+
+**3. Dados de Grupos:**
+
+id (int): ID único do grupo.</p>
+id_curso (inteiro): ID do curso ao qual o grupo está associado.</p>
+id_turma (inteiro): ID da turma à qual o grupo pertence.</p>
+nome_grupo (string): Nome descritivo do grupo.</p>
+alunos (array de inteiros): Uma lista de IDs de alunos que fazem parte deste grupo.</p>
+ 
+![Alt text](image-8.png) 
+```python
+{
+	"grupos" : [
+		{
+			"id" : 1,
+			"id_curso" : 1,
+			"id_turma" : 1,
+			"nome_grupo" : "Grupo A",
+			"alunos" : [1,2]
+		},
+		{
+			"id" : 2,
+			"id_curso" : 2,
+			"id_turma" : 3,
+			"nome_grupo" : "Grupo B",
+			"alunos" : [3]
+		}
+	]
+}
+
+```
+
+**4. Dados de Alunos:**
+
+alunos (array): Contém informações sobre os alunos matriculados em cursos.</p>
+id (int): ID único do aluno.</p>
+nome (string): Nome do aluno.</p>
+cursos_id (array de inteiros): IDs dos cursos aos quais o aluno está matriculado.</p>
+notas (array de objetos): Contém informações sobre as notas do aluno em diferentes cursos e    turmas.</p>
+id_curso (inteiro): ID do curso relacionado às notas.</p>
+id_turma (inteiro): ID da turma relacionada às notas.</p>
+notas (array de números): Lista de notas obtidas pelo aluno no curso e turma específicos.</p>
+ffe (nulo ou qualquer outro valor): Média das notas.</p>
+
+![Alt text](image-9.png)
 
 ```python
 {
@@ -28,47 +116,6 @@
 }
 
 ```
-
-Nessa relação temos que um **aluno** pode estar matriculado em **diferentes** cursos, o **aluno mateus** tem **duas listas de notas, uma para cada curso matriculado**.
-
-Dessa forma será possível fazer a média e adquirir estatísticas de notas de diferentes cursos e turmas.
-
-## <center> Tabelas de banco de dados:
-**1. Dados de Cursos:**
-
-cursos (array): Contém informações sobre os cursos disponíveis.
-id (inteiro): ID único do curso.
-nome_curso (string): Nome do curso.
-professor (string): Nome do professor responsável pelo curso.
-qtd_sprint (inteiro): Quantidade de sprints associadas ao curso.
-turmas (array de inteiros): IDs das turmas relacionadas ao curso.
-
-**2. Dados de Turmas:**
-
-turmas (array): Contém informações sobre as turmas.
-id (int): ID único da turma.
-id_curso (inteiro): ID do curso ao qual a turma está associada.
-nome_turma (string): Nome da turma.
-
-**3. Dados de Grupos:**
-
-id (int): ID único do grupo.
-id_curso (inteiro): ID do curso ao qual o grupo está associado.
-id_turma (inteiro): ID da turma à qual o grupo pertence.
-nome_grupo (string): Nome descritivo do grupo.
-alunos (array de inteiros): Uma lista de IDs de alunos que fazem parte deste grupo.
- 
-**4. Dados de Alunos:**
-
-alunos (array): Contém informações sobre os alunos matriculados em cursos.
-id (int): ID único do aluno.
-nome (string): Nome do aluno.
-cursos_id (array de inteiros): IDs dos cursos aos quais o aluno está matriculado.
-notas (array de objetos): Contém informações sobre as notas do aluno em diferentes cursos e    turmas.
-id_curso (inteiro): ID do curso relacionado às notas.
-id_turma (inteiro): ID da turma relacionada às notas.
-notas (array de números): Lista de notas obtidas pelo aluno no curso e turma específicos.
-ffe (nulo ou qualquer outro valor): Média das notas.
  
  
 # <center> **BACKLOG API (2 SPRINT):**
