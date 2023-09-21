@@ -3,65 +3,98 @@
 ## Épicos
 
 - **Exportação de Dados (Back-end)**: A consolidação e exportação de dados costumam ser tarefas realizadas no back-end, pois envolvem o processamento e a preparação de dados para exportação.
-- Gerenciamento de Turmas (curso) : Esse épico está relacionado à criação, atualização e visualização de turmas, que envolvem a interface do usuário para realizar essas operações.
-- Gerenciamento de grupo : Esse épico está relacionado à criação, atualização e visualização de grupos, que envolvem a interface do usuário para realizar essas operações.
-- Gerenciamento de Alunos : Esse épico lida com a adição, atualização e visualização de informações de alunos, bem como a adição de notas parciais, todos os quais são interações do usuário com a interface.
-- Gerenciamento de Ciclos de Entrega e Scores: Este épico envolve a criação, atualização e visualização de ciclos de entrega e scores parciais, que são aspectos visíveis para o usuário.
-- Visibilidade e Acompanhamento: Esse épico visa fornecer informações objetivas sobre turmas, grupos de alunos, etc. A apresentação dessas informações é uma preocupação do front-end.
-- Configurações Globais (Back-end): Este épico envolve a definição de parâmetros globais e o afeta o funcionamento do sistema. Essa configuração geralmente é tratada no back-end.
-- Importação de Dados massivo (Back-end): A tarefa de carregar informações de alunos e scores a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.
+- **Gerenciamento de Turmas (curso)** : Esse épico está relacionado à criação, atualização e visualização de turmas, que envolvem a interface do usuário para realizar essas operações.
+- **Gerenciamento de grupo** : Esse épico está relacionado à criação, atualização e visualização de grupos, que envolvem a interface do usuário para realizar essas operações.
+- **Gerenciamento de Alunos** : Esse épico lida com a adição, atualização e visualização de informações de alunos, bem como a adição de notas parciais, todos os quais são interações do usuário com a interface.
+- **Gerenciamento de Ciclos de Entrega e Scores:** Este épico envolve a criação, atualização e visualização de ciclos de entrega e scores parciais, que são aspectos visíveis para o usuário.
+- **Visibilidade e Acompanhamento:** Esse épico visa fornecer informações objetivas sobre turmas, grupos de alunos, etc. A apresentação dessas informações é uma preocupação do front-end.
+- **Configurações Globais (Back-end):** Este épico envolve a definição de parâmetros globais e o afeta o funcionamento do sistema. Essa configuração geralmente é tratada no back-end.
+- **Importação de Dados massivo (Back-end):** A tarefa de carregar informações de alunos e scores a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.
 
 
 ## Detalhamento dos Épicos
 
-Épico 1: Exportação de Dados
-História de Usuário 1: Como um administrador, eu quero selecionar as opções de gerenciamento e relatórios. Isso envolve a exportação de dados. 
-frontend:
- Botão no Index.html que gere relatórios vindo dos: gerenciamento_turmas.html, gerenciamento_alunos.html, gerenciamento_ciclos.html, gerenciamento_global.html.
+## **Épico 1: Exportação de Dados**
 
-backend:
-Rota da APi
-/api/relatorio/criar: Consolida os dados e exporta em formato PDF.
- Consolida os dados e os exporta em formato PDF.
-Épico 2: Gerenciamento de Turmas
-História de Usuário 1: Como um administrador, eu quero visualizar a lista de turmas disponíveis, seus respectivos grupos com os alunos e alunos.
-Frontend:
-Template HTML para Gerenciamento de Turmas: 
-gerenciamento_turmas.html que conterá todas as turmas já criadas com ícone de edição e de exclusão em cada um deles. 
+#### **História de Usuário 1: Como um administrador, eu quero selecionar as opções de gerenciamento e relatórios. Isso envolve a exportação de dados.**
 
-Backend
-Módulo gerenciador_turmas.py com funções para listar turmas.
-Rotas de API:
- /api/turmas/listar: Retorna a lista de turmas disponíveis.
-História de Usuário 2: Como um administrador, eu quero criar uma nova turma com nome da turma, o professor e a associação de grupos pré-existentes ou nenhum grupo.  A turma não precisa ser criada com grupo de alunos, mas precisa poder recebê-los. A turma só será ativa com grupo de alunos vinculados. 
-Frontend:
-Template HTML para Gerenciamento de Turmas: 
-criar_turma.html que conterá os formulários para criar uma nova turma que inclua um grupo de alunos
-A inclusão de grupos de alunos não precisa ser obrigatória.
+**Frontend:**
+  - Botão no Index.html que gere relatórios vindo dos: gerenciamento_turmas.html, gerenciamento_alunos.html, 	gerenciamento_ciclos.html, gerenciamento_global.html.
+
+![Alt text](epic1-hist1.png)  
+
+**Backend:**
+- Rota da APi
+	
+	- /api/relatorio/criar: Consolida os dados e exporta em formato PDF.
+ 	- Consolida os dados e os exporta em formato PDF.
+
+## **Épico 2: Gerenciamento de Turmas**
+
+#### **História de Usuário 1: Como um administrador, eu quero visualizar a lista de turmas disponíveis, seus respectivos grupos com os alunos e alunos.**
+
+**Frontend:**
+
+- Gerenciamento_turmas.html que conterá todas as turmas já criadas com ícone de edição e de exclusão em cada um deles.
+- Deverá ser criado um campo onde serão inseridas as turmas de forma dinâmica.
+- Botão para criar uma nova turma.
+ 
+ ![Alt Text](epic2-hist1.png)
+
+**Backend**
+- Módulo gerenciador_turmas.py com funções para listar turmas.
+ - Rotas de API:
+ 	-  /api/turmas/get: Retorna a lista de turmas disponíveis.
+	- /api/turmas/delete: Deletar uma turma.
 
 
-	Backend:
-Módulo gerenciador_turmas.py com funções para criar uma turma com/sem novo grupo de alunos.
-  Rotas de API:
-/api/turmas/criar: Manipula a criação de uma nova turma.
-/api/grupos /listar: Manipula a lista de grupos preexistente 
-História de Usuário 3: Como um administrador, eu quero editar as informações de uma turma e adicionar mais  grupos.
-Template HTML para Gerenciamento de Turmas: 
-editar_turmas.html que conterá os formulários de edição de uma nova turma, com possibilidade de ser levada a edição de grupo e de criar novo grupo. 
+#### **História de Usuário 2: Como um administrador, eu quero criar uma nova turma com nome da turma, o professor e a associação de grupos pré-existentes ou nenhum grupo.  A turma não precisa ser criada com grupo de alunos, mas precisa poder recebê-los. A turma só será ativa com grupo de alunos vinculados.**
 
-Módulo gerenciador_turmas.py com funções para atualizar informações de turma e editar grupo de alunos.
- Rotas de API:
-/api/turmas/atualizar/{id}: Manipula a atualização das informações de uma turma específica.
-/api/grupos/atualizar/{id}: Manipula a atualização das informações de um grupo de alunos específico.
+**Frontend:**
+- Template HTML para Gerenciamento de Turmas: 
 
-História de Usuário 4: Como um administrador, eu quero excluir uma turma e um grupo de alunos.
-Frontend:
+	- criar_turma.html que conterá os formulários para criar uma nova turma.
+	- A inclusão de grupos de alunos não precisa ser obrigatória.
+	- Nome da turma e professor são obrigatórios.
+	- Campo para procurar por um grupo pré-existente
+	- Campo para listar grupos 
+
+![Alt Text](epic2-hist2.png)
+
+**Backend:**
+
+- Módulo gerenciador_turmas.py com funções para criar uma turma com/sem novo grupo de alunos.
+- Rotas de API:
+
+	- /api/turmas/criar: Manipula a criação de uma nova turma.
+	- /api/grupos /listar: Manipula a lista de grupos preexistente 
+
+#### **História de Usuário 3: Como um administrador, eu quero editar as informações de uma turma e adicionar mais  grupos.**
+
+- Template HTML para Gerenciamento de Turmas: 
+	- editar_turmas.html que conterá os formulários de edição de uma nova turma, com possibilidade de ser levada a edição de grupo e de criar novo grupo. 
+
+![Alt Text](epic2-hist3.png)
+
+- Módulo gerenciador_turmas.py com funções para atualizar informações de turma e editar grupo de alunos.
+- Rotas de API:
+
+	- /api/turmas/atualizar/{id}: Manipula a atualização das informações de uma turma específica.
+	- /api/grupos/atualizar/{id}: Manipula a atualização das informações de um grupo de alunos específico.
+
+#### **História de Usuário 4: Como um administrador, eu quero excluir uma turma e um grupo de alunos.**
+
+**Frontend:**
+
 		Ícone de exclusão do grupo
 
-Módulo gerenciador_turmas.py com funções para excluir turmas.
-Rotas de API:
-/api/turmas/excluir/{id}: Manipula a exclusão de uma turma específica.
-/api/grupos/excluir/{id}: Manipula a exclusão de um grupo específico. (Vamos excluir o grupo?)
+![Alt Text](epic2-hist4.png)
+
+- Módulo gerenciador_turmas.py com funções para excluir turmas.
+- Rotas de API:
+	- /api/turmas/excluir/{id}: Manipula a exclusão de uma turma específica.
+	- /api/grupos/excluir/{id}: Manipula a exclusão de um grupo específico. (Vamos excluir o grupo?)
+
 Épico 3: Gerenciamento de grupos
 	História de Usuário 1: Como administrador, quero ver todos os grupos formados e associados às turmas. 
 Frontend: 
