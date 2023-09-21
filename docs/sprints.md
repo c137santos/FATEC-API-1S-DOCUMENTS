@@ -62,146 +62,226 @@ Módulo gerenciador_turmas.py com funções para excluir turmas.
 Rotas de API:
 /api/turmas/excluir/{id}: Manipula a exclusão de uma turma específica.
 /api/grupos/excluir/{id}: Manipula a exclusão de um grupo específico. (Vamos excluir o grupo?)
-Épico 3: Gerenciamento de grupos
-	História de Usuário 1: Como administrador, quero ver todos os grupos formados e associados às turmas. 
-Frontend: 
-Template HTML para visualização de grupos: 
-visualizar_grupos.html que conterá todos os grupos já criados com ícone de edição e de exclusão em cada um deles.  
-Cada grupo deve apresentar seu nome e respectiva turma.
 
-Backend: 
- Módulo visualizar_grupos.py com funções para listar os grupos associados às turmas. 
-Rotas de API:
- /api/grupos/listar: Manipula a listagem de grupos.
-História do usuário 2: Como um administrador, eu quero criar grupos de alunos associado a uma turma. 
+### **Épico 3: Gerenciamento de grupos**  
 
-Frontend
-Template HTML para criar um grupo: 
-criar_grupo.html que conterá os formulários de criação de um novo grupo
-Selecionar a qual turma ele pertencerá.
-Ao selecionar uma turma os alunos daquela turma irão aparecer para seleção. 
-Para adicionar um grupo é necessário inserir o nome do grupo e a turma. (deveríamos gerar o nome automaticamente a partir da turma que está sendo criada e o futuro id do grupo?)
-Backend
- Módulo gerenciador_grupo.py com funções para adicionar pré-existente, e associar esse grupo a uma turma. 
-Rotas de API: /api/grupos/adicionar: Manipula a adição de um novo grupo a uma turma.
-História do usuário 3: Como um administrador, eu quero editar grupos, essas devem ser associado a uma turma. 
-Frontend
-Template HTML para Gerenciamento de um grupo: 
-editar_grupos.html conterá as informações do grupo selecionado
-Pode levar a visualização das notas do aluno.
+#### **História de Usuário 1: Como administrador, quero ver todos os grupos formados e associados às turmas.**
 
-Backend:
- Módulo gerenciador_grupo.py com funções para adicionar alunos pré-existente, excluir aluno do grupo e editar qual turma esse grupo está associado. 
-Rotas de API: /api/grupos/editar/{id}: Manipula a adição de um novo aluno.
+**Frontend:**
 
-	História de Usuário 4: Como administrador, quero excluir os grupos fFrontend: 
-Template HTML para visualização de grupos: 
-visualizacar_grupos.html que conterá todos os grupos já criados com ícone de edição e de exclusão em cada um deles.  
-O icone deve acionar a ação de excluir 
+- Template HTML para visualização de grupos:    
+  - gerenciamento_grupos.html que conterá todos os grupos já criados com ícone de edição e de exclusão em cada um deles.  
+  - Cada grupo deve apresentar seu nome e respectiva turma.  
 
-Backend: 
- Módulo gerenciador_grupos.py com funções para excluir o aluno selecionado. 
-Rotas de API:
- /api/grupos/excluir/{id}: Manipula a listagem de grupos, excluindo o selecionado.
-Épico 4: Gerenciamento de Alunos
-História de Usuário 1: Como um administrador, eu quero listar alunos existentes. 
-Frontend
-Template HTML para listar Alunos:	
- gerenciamento_alunos.html que conterá um buscador e uma lista de alunos existentes, com botão para edição e de exclusão, e hiperlink para as notas do aluno 
+![Alt text](epic3-hist1.png)
 
-	Backend
- Módulo gerenciador_alunos.py com funções para listar um aluno. 
-Rotas de API: 
-/api/alunos/listar: Manipula a adição de um novo aluno.
-História de Usuário 2: Como um administrador, eu quero adicionar um novo aluno com informações pessoais e matrícula 
-Frontend
-Template HTML para Adicionar Alunos:	
- gerenciamento_alunos.html que conterá o formulário para adicionar um novo aluno
+**Backend:**  
 
-	Backend
- Módulo gerenciador_alunos.py com funções para adicionar um aluno. 
-Rotas de API: 
-/api/alunos/adicionar: Manipula a adição de um novo aluno.
-História de Usuário 3: Como um administrador, eu quero editar as informações de um aluno existente.
-Frontend: 
-Template HTML para editar aluno :
- edicao_alunos.html que conterá o formulário para adicionar um novo aluno
+- Módulo gerenciador_grupos.py com funções para listar os grupos associados às turmas. 
+- Rotas de API:
+  -  /api/grupos/listar: Manipula a listagem de grupos.
 
-Backend:
- Módulo gerenciador_alunos.py com funções para atualizar(editar) informações de alunos.
-Rotas de API: /api/alunos/atualizar/{id}: Manipula a atualização das informações de um aluno específico.
-História de Usuário 4: Como um administrador, eu quero excluir alunos.
-Frontend: 
-Template HTML para editar aluno :
- gerenciamento_alunos.html que um botão para exclusão do aluno
 
-Backend:
- Módulo gerenciador_alunos.py com funções para excluir alunos.
-Rotas de API: /api/alunos/excluir/{id}: Manipula a atualização das informações de um aluno específico.
+#### **História do usuário 2: Como um administrador, eu quero criar grupos de alunos associado a uma turma.**  
+![Alt text](epic3-hist2.png)
+**Frontend**  
+
+- Template HTML para criar um grupo: 
+  - criar_grupo.html que conterá os formulários de criação de um novo grupo  
+  - Selecionar a qual turma ele pertencerá.  
+  - Para adicionar um grupo é necessário inserir o nome do grupo e a turma.  
+  
+
+**Backend**  
+
+- Módulo gerenciador_grupo.py com funções para adicionar pré-existente, e associar esse grupo a uma turma.  
+- Rotas de API:  
+  - /api/tumas/listas: Fazer a leitura das turmas existentes.  
+  - /api/grupos/adicionar: Manipula a adição de um novo grupo a uma turma.  
+
+#### **História do usuário 3: Como um administrador, eu quero editar grupos, essas devem ser associado a uma turma.**  
+
+**Frontend**  
+
+- Template HTML para Gerenciamento de um grupo:  
+  - editar_grupo.html conterá as informações do grupo selecionado  
+  - Pode levar a visualização das notas do aluno.   
+![Alt text](epic3-hist3.png) 
+
+**Backend:**  
  
-Épico 5: Gerenciamento de Ciclos de Entrega e Scores
-História de Usuário 1: Como um administrador, eu quero visualizar(listar) as notas de um aluno.
-Preciso criar um campo para exibir o FEE total e parcial. Qual o cálculo do FEE?	FEE = ((Score do Ciclo de Entrega 1 (C1) * Peso de C1) + ... + (Score do Ciclo de Entrega N (CN) * Peso de CN)) / Soma dos Pesos de C
-Frontend:
-Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html que conterá o aluno, as turmas que estão matriculadas e as respectivas novas.
+- Módulo gerenciador_grupo.py com funções para adicionar alunos pré-existente, excluir aluno do grupo e editar qual turma esse grupo está associado.  
+- Rotas de API:  
+  - /api/grupos/editar/{id}: Manipula para editar grupos.
 
-	Backend:
-Módulo gerenciador_ciclos.py com funções para listar as turmas e as notas associadas aquele aluno.
-Rotas de API: /api/notas/listar/aluno/{id}: Manipula a lista de um novo ciclo de entrega
-História de Usuário 2: Como um administrador, eu quero adicionar uma nova nota a um aluno.
-Frontend:
-Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html que conterá os formulários para criar uma nova nota associada a uma turma.
+#### **História de Usuário 4: Como administrador, quero excluir os grupos fFrontend:**  
 
-	Backend:
-Módulo gerenciador_ciclos.py com funções para criar nota associada a aluno e ao ciclo de entrega.
-Rotas de API: /api/notas/criar/turma/{id}: Manipula a criação de um novo ciclo de entrega
+- Template HTML para visualização de grupos:  
+  - visualizacar_grupos.html que conterá todos os grupos já criados com ícone de edição e de exclusão em cada um deles.  
+  - O ícone deve acionar a ação de excluir 
+![Alt text](epic3-hist4.png)  
+
+**Backend:**  
+
+ - Módulo gerenciador_grupos.py com funções para excluir o aluno selecionado.  
+ - Rotas de API:  
+   - /api/grupos/excluir/{id}: Manipula a listagem de grupos, excluindo o selecionado.  
+
+### **Épico 4: Gerenciamento de Alunos**  
+
+#### **História de Usuário 1: Como um administrador, eu quero listar alunos existentes.**  
+
+**Frontend**  
+
+- Template HTML para listar Alunos:  
+  - gerenciamento_alunos.html que conterá um buscador e uma lista de alunos existentes, com botão para edição e de exclusão, e hiperlink para as notas do aluno  
+
+![Alt text](epic4-hist1.png)  
+**Backend**  
+
+- Módulo gerenciador_alunos.py com funções para listar um aluno.  
+- Rotas de API:  
+  - /api/alunos/listar: Manipula a adição de um novo aluno.  
+
+#### **História de Usuário 2: Como um administrador, eu quero adicionar um novo aluno com informações pessoais e matrícula**  
+
+**Frontend**  
+
+- Template HTML para Adicionar Alunos:	 
+  - gerenciamento_alunos.html que conterá o formulário para adicionar um novo aluno  
+![Alt text](epic4-hist2.png)
+
+**Backend**  
+
+- Módulo gerenciador_alunos.py com funções para adicionar um aluno.  
+- Rotas de API:  
+  - /api/alunos/adicionar: Manipula a adição de um novo aluno.
+
+#### **História de Usuário 3: Como um administrador, eu quero editar as informações de um aluno existente.**  
+
+**Frontend:**  
+
+- Template HTML para editar aluno:  
+  - edicao_alunos.html que conterá o formulário para adicionar um novo aluno  
+![Alt text](epic4-hist3.png)
+
+**Backend:**  
+
+- Módulo gerenciador_alunos.py com funções para atualizar(editar) informações de alunos.  
+- Rotas de API: /api/alunos/atualizar/{id}: Manipula a atualização das informações de um aluno específico.
+
+#### **História de Usuário 4: Como um administrador, eu quero excluir alunos.**  
+
+**Frontend:**  
+
+- Template HTML para editar aluno :
+   - gerenciamento_alunos.html que um botão para exclusão do aluno  
+![Alt text](epic4-hist4.png)
+
+**Backend:**  
+
+ - Módulo gerenciador_alunos.py com funções para excluir alunos.  
+- Rotas de API: /api/alunos/excluir/{id}: Manipula a atualização das informações de um aluno específico.  
+
+### **Épico 5: Gerenciamento de Ciclos de Entrega e Scores**  
+
+#### **História de Usuário 1: Como um administrador, eu quero visualizar(listar) as notas de um aluno.**  
+
+**Preciso criar um campo para exibir o FEE total e parcial.** Qual o cálculo do FEE?	FEE = ((Score do Ciclo de Entrega 1 (C1) * Peso de C1) + ... + (Score do Ciclo de Entrega N (CN) * Peso de CN)) / Soma dos Pesos de C  
+
+**Frontend:**
+
+- Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html que conterá o aluno, as turmas que estão matriculadas e as respectivas novas.  
+![Alt text](epic5-hist1.png)
+
+**Backend:**  
+
+- Módulo gerenciador_ciclos.py com funções para listar as turmas e as notas associadas aquele aluno.  
+- Rotas de API: /api/notas/listar/aluno/{id}: Manipula a lista de um novo ciclo de entrega
+
+#### **História de Usuário 2: Como um administrador, eu quero adicionar uma nova nota a um aluno.**  
+
+**Frontend:**  
+
+- Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html que conterá os formulários para criar uma nova nota associada a uma turma.
+![Alt text](epic5-hist2.png)
+
+**Backend:**  
+
+- Módulo gerenciador_ciclos.py com funções para criar nota associada a aluno e ao ciclo de entrega.  
+- Rotas de API: /api/notas/criar/turma/{id}: Manipula a criação de um novo ciclo de entrega  
  
-História de Usuário 3: Como um administrador, eu quero editar as notas de entrega existente.
-Frontend:
-Template HTML para Gerenciamento de Ciclos de Entrega: editar_nota.html que conterá os formulários para editar uma nota pré-existente associada a uma turma.
+#### **História de Usuário 3: Como um administrador, eu quero editar as notas de entrega existente.**  
 
-Backend:
-Módulo gerenciador_ciclos.py com funções para as notas de ciclos de entrega.
-Rotas de API: 
-/api/nota/atualizar/{id}: Manipula a atualização da nota em uma determinada entrega específica.
-História de Usuário 4: Como um administrador, eu quero excluir notas parciais para os alunos em relação a um ciclo.
-Frontend:
-Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html  que conterá um ícone que deletar a nota de um aluno associado a um ciclo e uma turma.  
+**Frontend:**  
 
-Backend
-Módulo gerenciador_ciclos.py com funções para excluir as notas de ciclos de entrega.
-Rotas de API: 
-/api/nota/excluir/{id}: Manipula a exclusão de uma nota em uma determinada entrega específica.
-Épico 6: Configurações Globais
-História de Usuário 1: Como um administrador, eu listar e ver os parâmetros globais das turmas
-Frontend: 
-Template HTML para Gerenciamento Global: gerenciamento_global.html que conterá as turmas existentes com seus respectivos parametros globais. TOdas devem conter seu botão de editar. 
+- Template HTML para Gerenciamento de Ciclos de Entrega: editar_nota.html que conterá os formulários para editar uma nota pré-existente associada a uma turma.  
+![Alt text](epic5-hist3.png) 
 
-	Backend:
-Função para listar parâmetros globais no módulo gerenciador_configuracoes.py
-Rota de API: /api/globalsettings/listar
- para manipular a atualização dos parâmetros globais. 
-História de Usuário 2: Como um administrador, eu quero editar parâmetros globais, como datas do período letivo.
-Frontend: 
-Template HTML para Gerenciamento Global: gerenciamento_global.html que conterá os formulários para atualizar os parâmetros globais de cada turma.
+**Backend:**  
 
-	Backend:
-Função para atualizar parâmetros globais no módulo gerenciador_configuracoes.py
-Rota de API :api/globalsettings/{id}/editar 
-para manipular a atualização dos parâmetros globais. 
+- Módulo gerenciador_ciclos.py com funções para as notas de ciclos de entrega.  
+- Rotas de API:  
+  - /api/nota/atualizar/{id}: Manipula a atualização da nota em uma determinada entrega específica.  
 
-Épico 7: Carregamento de Dados massivo
-História de Usuário 1: Como um administrador, eu quero carregar informações de alunos partir de arquivos.
-Frontend: 
-Tela de index.html terá um botão para update para o carregamento do CSV
-Sugestão ( botão que faz download de uma planilha padrão de sugestão para a importação do CSV)
+#### **História de Usuário 4: Como um administrador, eu quero excluir notas parciais para os alunos em relação a um ciclo.**  
 
-	Backend: 
-Módulo carregamento_dados.py com funções para carregar informações de alunos e scores a partir de um arquivo CSV.
-Função para autenticar o formato do CSV, ou seja, ver se está dentro dos padrões
-Função para realizar o cadastramento de cada um dos alunos. 
-Rotas de API:
-/api/carregamento: Manipula o carregamento de dados a partir de arquivos.
+**Frontend:**
+
+- Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html  que conterá um ícone que deletar a nota de um aluno associado a um ciclo e uma turma.  
+![Alt text](epic5-hist4.png)  
+
+**Backend:**  
+
+- Módulo gerenciador_ciclos.py com funções para excluir as notas de ciclos de entrega.  
+- Rotas de API:  
+  - /api/nota/excluir/{id}: Manipula a exclusão de uma nota em uma determinada entrega específica.  
+
+### **Épico 6: Configurações Globais**  
+
+#### **História de Usuário 1: Como um administrador, quero listar e ver os parâmetros globais das turmas**  
+
+**Frontend:**  
+
+- Template HTML para Gerenciamento Global: gerenciamento_global.html que conterá as turmas existentes com seus respectivos parametros globais. Todas devem conter seu botão de editar.  
+![Alt text](epic6-hist1.png)  
+
+**Backend:**  
+
+- Função para listar parâmetros globais no módulo gerenciador_configuracoes.py  
+- Rota de API: /api/globalsettings/listar 
+  - para manipular a atualização dos parâmetros globais.  
+
+#### **História de Usuário 2: Como um administrador, eu quero editar parâmetros globais, como datas do período letivo.**
+
+**Frontend:**  
+
+- Template HTML para Gerenciamento Global: gerenciamento_global.html que conterá os formulários para atualizar os parâmetros globais de cada turma. 
+![Alt text](epic6-hist2.png)  
+
+**Backend:**  
+
+- Função para atualizar parâmetros globais no módulo gerenciador_configuracoes.py  
+- Rota de API :api/globalsettings/{id}/editar  
+  - para manipular a atualização dos parâmetros globais.  
+
+### **Épico 7: Carregamento de Dados massivo**  
+
+#### **História de Usuário 1: Como um administrador, eu quero carregar informações de alunos partir de arquivos.**  
+
+**Frontend:**  
+
+- Tela de index.html terá um botão para update para o carregamento do CSV  
+- Sugestão ( botão que faz download de uma planilha padrão de sugestão para a importação do CSV)  
+![Alt text](epic7-hist1.png)  
+
+**Backend:**  
+
+- Módulo carregamento_dados.py com funções para carregar informações de alunos e scores a partir de um arquivo CSV.  
+- Função para autenticar o formato do CSV, ou seja, ver se está dentro dos padrões.  
+- Função para realizar o cadastramento de cada um dos alunos.  
+- Rotas de API:
+  - /api/carregamento: Manipula o carregamento de dados a partir de arquivos.
 
 
 # <center> Persistência de dados
