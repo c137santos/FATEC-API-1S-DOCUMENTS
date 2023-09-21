@@ -12,6 +12,7 @@ Para visitar como ela funciona, você pode visitar essa doc!
 
 ## O que você vai encontrar nessa documentação?
 
+### Backend
 - Git e github. Como você pode puxar atualizações e commitar no local correto?
     * [Como fazer o pull request no local correto.](biblioteca.md#como-fazer-o-pull-request-no-local-correto)
     * [Como se fosse a primeira vez: configurando upstream](biblioteca.md#como-se-fosse-a-primeira-vez-configurando-upstream)
@@ -19,6 +20,10 @@ Para visitar como ela funciona, você pode visitar essa doc!
 - Configurações do projeto. Como consigo rodar esse projeto na minha máquina?
     * [Virtualenvs](biblioteca.md#virtualenvs)
     * [Instale o pyenv](biblioteca.md#instale-o-pyenv)
+
+### Frontend
+
+- Rascunho de telas iniciais gerais. 
 
 ## Metodológias ágeis - scrum
 
