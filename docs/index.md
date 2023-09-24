@@ -27,7 +27,7 @@ Para visitar como ela funciona, você pode visitar essa doc!
 
 ## Metodológias ágeis - scrum
 
-O documento que regeu o manifesto ágil possui 12 princípios.
+O documento que regeu o manifesto ágil possui 12 princípios. Leia sempre que tiver dúvida se a equipe ou você está indo bem!
 
 Maior prioridade A satisfação do cliente somados as entregas parciais e contínuas do software, de forma adianta e com valor agredado. Não há foco em documentações rígidas, e sim na iteração constante com o cliente.
 
