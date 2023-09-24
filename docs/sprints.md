@@ -3,67 +3,100 @@
 ## Épicos
 
 - **Exportação de Dados (Back-end)**: A consolidação e exportação de dados costumam ser tarefas realizadas no back-end, pois envolvem o processamento e a preparação de dados para exportação.
-- Gerenciamento de Turmas (curso) : Esse épico está relacionado à criação, atualização e visualização de turmas, que envolvem a interface do usuário para realizar essas operações.
-- Gerenciamento de grupo : Esse épico está relacionado à criação, atualização e visualização de grupos, que envolvem a interface do usuário para realizar essas operações.
-- Gerenciamento de Alunos : Esse épico lida com a adição, atualização e visualização de informações de alunos, bem como a adição de notas parciais, todos os quais são interações do usuário com a interface.
-- Gerenciamento de Ciclos de Entrega e Scores: Este épico envolve a criação, atualização e visualização de ciclos de entrega e scores parciais, que são aspectos visíveis para o usuário.
-- Visibilidade e Acompanhamento: Esse épico visa fornecer informações objetivas sobre turmas, grupos de alunos, etc. A apresentação dessas informações é uma preocupação do front-end.
-- Configurações Globais (Back-end): Este épico envolve a definição de parâmetros globais e o afeta o funcionamento do sistema. Essa configuração geralmente é tratada no back-end.
-- Importação de Dados massivo (Back-end): A tarefa de carregar informações de alunos e scores a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.
+- **Gerenciamento de Turmas (curso)** : Esse épico está relacionado à criação, atualização e visualização de turmas, que envolvem a interface do usuário para realizar essas operações.
+- **Gerenciamento de grupo** : Esse épico está relacionado à criação, atualização e visualização de grupos, que envolvem a interface do usuário para realizar essas operações.
+- **Gerenciamento de Alunos** : Esse épico lida com a adição, atualização e visualização de informações de alunos, bem como a adição de notas parciais, todos os quais são interações do usuário com a interface.
+- **Gerenciamento de Ciclos de Entrega e Scores:** Este épico envolve a criação, atualização e visualização de ciclos de entrega e scores parciais, que são aspectos visíveis para o usuário.
+- **Visibilidade e Acompanhamento:** Esse épico visa fornecer informações objetivas sobre turmas, grupos de alunos, etc. A apresentação dessas informações é uma preocupação do front-end.
+- **Configurações Globais (Back-end):** Este épico envolve a definição de parâmetros globais e o afeta o funcionamento do sistema. Essa configuração geralmente é tratada no back-end.
+- **Importação de Dados massivo (Back-end):** A tarefa de carregar informações de alunos e scores a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.
 
 
 ## Detalhamento dos Épicos
 
-Épico 1: Exportação de Dados
-História de Usuário 1: Como um administrador, eu quero selecionar as opções de gerenciamento e relatórios. Isso envolve a exportação de dados. 
-frontend:
- Botão no Index.html que gere relatórios vindo dos: gerenciamento_turmas.html, gerenciamento_alunos.html, gerenciamento_ciclos.html, gerenciamento_global.html.
+## **Épico 1: Exportação de Dados**
 
-backend:
-Rota da APi
-/api/relatorio/criar: Consolida os dados e exporta em formato PDF.
- Consolida os dados e os exporta em formato PDF.
-Épico 2: Gerenciamento de Turmas
-História de Usuário 1: Como um administrador, eu quero visualizar a lista de turmas disponíveis, seus respectivos grupos com os alunos e alunos.
-Frontend:
-Template HTML para Gerenciamento de Turmas: 
-gerenciamento_turmas.html que conterá todas as turmas já criadas com ícone de edição e de exclusão em cada um deles. 
+#### **História de Usuário 1: Como um administrador, eu quero selecionar as opções de gerenciamento e relatórios. Isso envolve a exportação de dados.**
 
-Backend
-Módulo gerenciador_turmas.py com funções para listar turmas.
-Rotas de API:
- /api/turmas/listar: Retorna a lista de turmas disponíveis.
-História de Usuário 2: Como um administrador, eu quero criar uma nova turma com nome da turma, o professor e a associação de grupos pré-existentes ou nenhum grupo.  A turma não precisa ser criada com grupo de alunos, mas precisa poder recebê-los. A turma só será ativa com grupo de alunos vinculados. 
-Frontend:
-Template HTML para Gerenciamento de Turmas: 
-criar_turma.html que conterá os formulários para criar uma nova turma que inclua um grupo de alunos
-A inclusão de grupos de alunos não precisa ser obrigatória.
+**Frontend:**
+  - Botão no Index.html que gere relatórios vindo dos: gerenciamento_turmas.html, gerenciamento_alunos.html, 	gerenciamento_ciclos.html, gerenciamento_global.html.
+
+![Alt text](epic1-hist1.png)  
+
+**Backend:**
+- Rota da API
+	
+	- /api/relatorio/criar: Consolida os dados e exporta em formato PDF.
+ 	- Consolida os dados e os exporta em formato PDF.
+
+## **Épico 2: Gerenciamento de Turmas**
+
+#### **História de Usuário 1: Como um administrador, eu quero visualizar a lista de turmas disponíveis, seus respectivos grupos com os alunos e alunos.**
+
+**Frontend:**
+
+- Gerenciamento_turmas.html que conterá todas as turmas já criadas com ícone de edição e de exclusão em cada um deles.
+- Deverá ser criado um campo onde serão inseridas as turmas de forma dinâmica.
+- Botão para criar uma nova turma.
+ 
+ ![Alt Text](epic2-hist1.png)
+
+**Backend**
+- Módulo gerenciador_turmas.py com funções para listar turmas.
+ - Rotas de API:
+ 	- /api/turmas/get: Retorna a lista de turmas disponíveis.
+	- /api/turmas/delete: Deletar uma turma.
 
 
-	Backend:
-Módulo gerenciador_turmas.py com funções para criar uma turma com/sem novo grupo de alunos.
-  Rotas de API:
-/api/turmas/criar: Manipula a criação de uma nova turma.
-/api/grupos /listar: Manipula a lista de grupos preexistente 
-História de Usuário 3: Como um administrador, eu quero editar as informações de uma turma e adicionar mais  grupos.
-Template HTML para Gerenciamento de Turmas: 
-editar_turmas.html que conterá os formulários de edição de uma nova turma, com possibilidade de ser levada a edição de grupo e de criar novo grupo. 
+#### **História de Usuário 2: Como um administrador, eu quero criar uma nova turma com nome da turma, o professor e a associação de grupos pré-existentes ou nenhum grupo.  A turma não precisa ser criada com grupo de alunos, mas precisa poder recebê-los. A turma só será ativa com grupo de alunos vinculados.**
 
-Módulo gerenciador_turmas.py com funções para atualizar informações de turma e editar grupo de alunos.
- Rotas de API:
-/api/turmas/atualizar/{id}: Manipula a atualização das informações de uma turma específica.
-/api/grupos/atualizar/{id}: Manipula a atualização das informações de um grupo de alunos específico.
+**Frontend:**
+- Template HTML para Gerenciamento de Turmas: 
 
-História de Usuário 4: Como um administrador, eu quero excluir uma turma e um grupo de alunos.
-Frontend:
+	- criar_turma.html que conterá os formulários para criar uma nova turma.
+	- A inclusão de grupos de alunos não precisa ser obrigatória.
+	- Nome da turma e professor são obrigatórios.
+	- Campo para procurar por um grupo pré-existente
+	- Campo para listar grupos 
+
+![Alt Text](epic2-hist2.png)
+
+**Backend:**
+
+- Módulo gerenciador_turmas.py com funções para criar uma turma com/sem novo grupo de alunos.
+- Rotas de API:
+
+	- /api/turmas/criar: Manipula a criação de uma nova turma.
+	- /api/grupos /listar: Manipula a lista de grupos preexistente 
+
+#### **História de Usuário 3: Como um administrador, eu quero editar as informações de uma turma e adicionar mais  grupos.**
+
+- Template HTML para Gerenciamento de Turmas: 
+	- editar_turmas.html que conterá os formulários de edição de uma nova turma, com possibilidade de ser levada a edição de grupo e de criar novo grupo. 
+
+![Alt Text](epic2-hist3.png)
+
+- Módulo gerenciador_turmas.py com funções para atualizar informações de turma e editar grupo de alunos.
+- Rotas de API:
+
+	- /api/turmas/atualizar/{id}: Manipula a atualização das informações de uma turma específica.
+	- /api/grupos/atualizar/{id}: Manipula a atualização das informações de um grupo de alunos específico.
+
+#### **História de Usuário 4: Como um administrador, eu quero excluir uma turma e um grupo de alunos.**
+
+**Frontend:**
+
 		Ícone de exclusão do grupo
 
-Módulo gerenciador_turmas.py com funções para excluir turmas.
-Rotas de API:
-/api/turmas/excluir/{id}: Manipula a exclusão de uma turma específica.
-/api/grupos/excluir/{id}: Manipula a exclusão de um grupo específico. (Vamos excluir o grupo?)
+![Alt Text](epic2-hist4.png)
 
-### **Épico 3: Gerenciamento de grupos**  
+- Módulo gerenciador_turmas.py com funções para excluir turmas.
+- Rotas de API:
+	- /api/turmas/excluir/{id}: Manipula a exclusão de uma turma específica.
+	- /api/grupos/excluir/{id}: Manipula a exclusão de um grupo específico. (Vamos excluir o grupo?)
+
+### **
+Épico 3: Gerenciamento de grupos**  
 
 #### **História de Usuário 1: Como administrador, quero ver todos os grupos formados e associados às turmas.**
 
@@ -284,14 +317,93 @@ Rotas de API:
   - /api/carregamento: Manipula o carregamento de dados a partir de arquivos.
 
 
-# <center> Persistência de dados
+# **<p style="text-align:center;">Persistência de dados</p>**
 
-### <center> Relação de entidades:
+### **<p style="text-align:center;">Relação de Entidades</p>**
 ![Alt text](image-6.png)
 
-Por exemplo, os alunos:
+Nessa relação temos que um **aluno** pode estar matriculado em **diferentes** cursos, o **aluno mateus** tem **duas listas de notas, uma para cada curso matriculado**.
+
+Dessa forma será possível fazer a média e adquirir estatísticas de notas de diferentes cursos e turmas.
+
+**<p style="text-align:center;">Tabelas de banco de dados</p>**
+
+**1. Dados de Cursos:**
+
+cursos (array): Contém informações sobre os cursos disponíveis.</p>
+id (inteiro): ID único do curso.</p>
+nome_curso (string): Nome do curso.</p>
+professor (string): Nome do professor responsável pelo curso.</p>
+qtd_sprint (inteiro): Quantidade de sprints associadas ao curso.</p>
+turmas (array de inteiros): IDs das turmas relacionadas ao curso.</p>
+
+**2. Dados de Turmas:**
+
+turmas (array): Contém informações sobre as turmas.</´p>
+id (int): ID único da turma.</p>
+id_curso (inteiro): ID do curso ao qual a turma está associada.</p>
+nome_turma (string): Nome da turma.</p>
 
 ```python
+{
+	"turmas" : [
+		{
+			"id": 1,
+			"id_curso": 1,
+			"nome_turma" : "Turma A"
+		},
+		{
+			"id": 2,
+			"id_curso": 2,
+			"nome_turma" : "Turma A"
+		}
+	]
+}
+
+```
+
+**3. Dados de Grupos:**
+
+id (int): ID único do grupo.</p>
+id_curso (inteiro): ID do curso ao qual o grupo está associado.</p>
+id_turma (inteiro): ID da turma à qual o grupo pertence.</p>
+nome_grupo (string): Nome descritivo do grupo.</p>
+alunos (array de inteiros): Uma lista de IDs de alunos que fazem parte deste grupo.</p>
+
+```python
+{
+	"grupos" : [
+		{
+			"id": 1,
+			"id_curso": 1,
+			"id_turma": 1,
+			"nome_grupo": "Grupo A",
+			"alunos": [1,2]
+		}
+		{
+			"id": 2,
+			"id_curso": 2,
+			"id_turma": 3,
+			"nome_grupo": "Grupo B",
+			"alunos": [3]
+		}
+	]
+}
+```
+ 
+**4. Dados de Alunos:**
+
+alunos (array): Contém informações sobre os alunos matriculados em cursos.</p>
+id (int): ID único do aluno.</p>
+nome (string): Nome do aluno.</p>
+cursos_id (array de inteiros): IDs dos cursos aos quais o aluno está matriculado.</p>
+notas (array de objetos): Contém informações sobre as notas do aluno em diferentes cursos e    turmas.</p>
+id_curso (inteiro): ID do curso relacionado às notas.</p>
+id_turma (inteiro): ID da turma relacionada às notas.</p>
+notas (array de números): Lista de notas obtidas pelo aluno no curso e turma específicos.</p>
+ffe (nulo ou qualquer outro valor): Média das notas.</p>
+ 
+ ```python
 {
 	"alunos": [
 	    {
@@ -318,55 +430,12 @@ Por exemplo, os alunos:
 }
 
 ```
-
-Nessa relação temos que um **aluno** pode estar matriculado em **diferentes** cursos, o **aluno mateus** tem **duas listas de notas, uma para cada curso matriculado**.
-
-Dessa forma será possível fazer a média e adquirir estatísticas de notas de diferentes cursos e turmas.
-
-## <center> Tabelas de banco de dados:
-
-**1. Dados de Cursos:**
-
-cursos (array): Contém informações sobre os cursos disponíveis.
-id (inteiro): ID único do curso.
-nome_curso (string): Nome do curso.
-professor (string): Nome do professor responsável pelo curso.
-qtd_sprint (inteiro): Quantidade de sprints associadas ao curso.
-turmas (array de inteiros): IDs das turmas relacionadas ao curso.
-
-**2. Dados de Turmas:**
-
-turmas (array): Contém informações sobre as turmas.
-id (int): ID único da turma.
-id_curso (inteiro): ID do curso ao qual a turma está associada.
-nome_turma (string): Nome da turma.
-
-**3. Dados de Grupos:**
-
-id (int): ID único do grupo.
-id_curso (inteiro): ID do curso ao qual o grupo está associado.
-id_turma (inteiro): ID da turma à qual o grupo pertence.
-nome_grupo (string): Nome descritivo do grupo.
-alunos (array de inteiros): Uma lista de IDs de alunos que fazem parte deste grupo.
  
-**4. Dados de Alunos:**
+## **<p style="text-align:center;">BACKLOG API (2º SPRINT):</p>
+ 
+### **Épico 1: Gerenciamento de turma:**</p>
 
-alunos (array): Contém informações sobre os alunos matriculados em cursos.
-id (int): ID único do aluno.
-nome (string): Nome do aluno.
-cursos_id (array de inteiros): IDs dos cursos aos quais o aluno está matriculado.
-notas (array de objetos): Contém informações sobre as notas do aluno em diferentes cursos e    turmas.
-id_curso (inteiro): ID do curso relacionado às notas.
-id_turma (inteiro): ID da turma relacionada às notas.
-notas (array de números): Lista de notas obtidas pelo aluno no curso e turma específicos.
-ffe (nulo ou qualquer outro valor): Média das notas.
- 
- 
-## <center> **BACKLOG API (2º SPRINT):**
- 
-### **Épico 1: Gerenciamento de turma:**
-
-#### **História de Usuário 1: Como um administrador, eu quero criar uma nova turma.**
+####  **<p style="text-align:center;">História de Usuário 1: Como um administrador, eu quero criar uma nova turma.</p>**
 
 1. Criar tela inicial que encaminhe para a administração de um curso.
 
@@ -383,7 +452,8 @@ ffe (nulo ou qualquer outro valor): Média das notas.
 7. Campo para procurar um curso existente.
  
  
-#### **História de Usuário 2: Como um administrador, eu quero adicionar uma turma.**
+### **<p style="text-align:center;">História de Usuário 2: Como um administrador, eu quero adicionar uma turma.</p>**
+
 
 1. Criar tela de administração de turmas.
 
@@ -397,16 +467,16 @@ ffe (nulo ou qualquer outro valor): Média das notas.
 
 6. Teste para ver se o relacionamento entre o curso e a turma então corretos.
  
-#### **História de Usuário 3: Como um administrador, eu quero adicionar um aluno a uma turma.**
+#### **<p style="text-align:center;">História de Usuário 3: Como um administrador, eu quero adicionar um aluno a uma turma.</p>**
  
 1. Criar tela de administração de alunos.
  
-#### **História de Usuário 4: Como um administrador, eu quero adicionar um aluno a um grupo.**
+#### **<p style="text-align:center;">História de Usuário 4: Como um administrador, eu quero adicionar um aluno a um grupo.</p>**
  
  
 ### **Épico 2:  Rotas de API:**
 
-#### **História de Usuário 1: Como administrador eu quero configurar meus cursos**
+#### **<p style="text-align:center;">História de Usuário 1: Como administrador eu quero configurar meus cursos.</p>**
 
 1. Necessário criar as rotas para que o front end consiga fazer o croud
 
