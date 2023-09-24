@@ -23,7 +23,7 @@ Para visitar como ela funciona, você pode visitar essa doc!
 
 ### Frontend
 
-- Rascunho de telas iniciais gerais. 
+- [Wireframe e fluxos do produto](frontend.md#wireframe-e-fluxos-do-produto)
 
 ## Metodológias ágeis - scrum
 

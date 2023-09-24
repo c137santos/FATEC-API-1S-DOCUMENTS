@@ -1,7 +1,7 @@
 <h1> Aqui vamos discutir e explicar nosso frontend!</h1> 
 
 Para dar noção do nosso projeto, nós desenhamos todas as telas que imaginamos ser necessárias a partir do nosso backlog inicial e os requisitos. 
-
+## Wireframe e fluxos do produto
 ![Alt text](image-7.png)
 
 Épico 1: Exportação de Dados
@@ -36,7 +36,3 @@ adicionar_notas.html
 Tela:
 gerenciamento_global.html (Listagem e edição de parâmetros globais), com botão para exclusão de configurações globais, que, cuidado, vai excluir a turma inteira. 
 editar_gerenciamento_global.html
-
-# Telas desenvolvidas e suas funcionalidades. 
-
-Em construção...
