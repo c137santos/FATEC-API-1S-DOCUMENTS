@@ -428,7 +428,7 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 }
 ```
 
-# **<p style="text-align:center;">Resumo tabelas JSON:</p>**
+## Resumo tabelas JSON:
 
 - Cada aluno (identificado em alunos.json) pertence a um grupo (especificado em grupo_alunos.json), e cada grupo está associado a uma turma (em grupos.json).
 
@@ -442,82 +442,122 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 
 # Épico 2: Gerenciamento de Turmas 🔴
 
-## História de Usuário 1: Visualizar Lista de Turmas
+## História de Usuário 1: Visualizar e Gerenciar Turmas Disponíveis
 
-**Como um administrador, eu quero visualizar a lista de turmas disponíveis.**
+**Como um administrador, eu quero visualizar a lista de turmas disponíveis e gerenciá-las.**
 
 ### Frontend:
 
-- `gerenciamento_turmas.html` que conterá todas as turmas já criadas com ícone de edição e de exclusão em cada um deles.
-- Botão "Criar Turma" que abrirá um modal.
-- Modal "Criar Turma" com campos para nome da turma, nome do professor e um botão "Salvar" que realizará um POST para `turmas.json`.
-- Um campo onde as turmas serão inseridas de forma dinâmica.
-- Botão para criar uma nova turma.
+- Crie um template HTML chamado `gerenciamento_turmas.html` que exibirá todas as turmas já criadas.
+- Na interface, liste as turmas existentes, incluindo um ícone de edição e um ícone de exclusão para cada turma.
+- Implemente um botão "Criar Turma" que abrirá um modal ao ser clicado.
+- No modal "Criar Turma", inclua campos para inserir o nome da turma, nome do professor e um botão "Salvar". Quando o botão "Salvar" for clicado, envie um pedido POST para adicionar uma nova turma no arquivo `turmas.json`.
+- Implemente um campo onde as turmas serão inseridas de forma dinâmica.
+- Forneça um botão "Criar Nova Turma" para facilitar a criação de turmas.
 
 ![Alt text](epic2-hist1.png)
 
 ### Backend:
 
-- Módulo `gerenciador_turmas.py` com funções para listar turmas.
-- Rotas de API:
-  - `/api/turmas/get`: Retorna a lista de turmas disponíveis.
-  - `/api/turmas/delete`: Deletar uma turma.
+- Desenvolva um módulo chamado `gerenciador_turmas.py` com funções para listar turmas e deletar turmas.
+- Defina duas rotas de API:
+  1. `/api/turmas/get`: Esta rota retorna a lista de turmas disponíveis como um JSON.
+  2. `/api/turmas/delete`: Esta rota permite a exclusão de uma turma específica.
 
-## História de Usuário 2: Criar Nova Turma
+### Fluxo de Atividade:
 
-**Como um administrador, eu quero criar uma nova turma com nome da turma, o professor e a associação de grupos pré-existentes ou nenhum grupo. A turma não precisa ser criada com grupo de alunos, mas precisa poder recebê-los. A turma só será ativa com grupo de alunos vinculados.**
+1. O administrador acessa a página `gerenciamento_turmas.html` no frontend.
+2. Na interface, a lista de turmas disponíveis é exibida com ícones de edição e exclusão para cada turma.
+3. O administrador pode clicar no ícone de edição para editar as informações da turma ou clicar no ícone de exclusão para remover a turma.
+4. Ao clicar no botão "Criar Turma", um modal é exibido com campos para inserir o nome da turma e o nome do professor.
+5. O administrador preenche os campos e clica em "Salvar" para criar uma nova turma, que é adicionada dinamicamente à lista de turmas.
+6. O administrador pode usar o botão "Criar Nova Turma" para adicionar mais turmas conforme necessário.
+
+## História de Usuário 2: Criar Nova Turma com Associação Opcional de Grupos
+
+**Como um administrador, eu quero criar uma nova turma com o nome da turma e o nome do professor, com a opção de associá-la a grupos pré-existentes, mas sem a obrigatoriedade de incluir grupos no momento da criação. A turma só será considerada ativa quando tiver grupos de alunos vinculados.**
 
 ### Frontend:
 
-- Template HTML `criar_turma.html` que conterá os formulários para criar uma nova turma.
-- A inclusão de grupos de alunos não precisa ser obrigatória.
-- Nome da turma e professor são obrigatórios.
-- Campo para procurar por um grupo pré-existente.
-- Campo para listar grupos.
+- Crie um template HTML chamado `criar_turma.html` que conterá os formulários para criar uma nova turma.
+- Inclua campos obrigatórios para inserir o nome da turma e o nome do professor.
+- Implemente um campo onde o administrador possa procurar por grupos pré-existentes.
+- Ofereça um campo para listar grupos e permita que o administrador escolha quais grupos deseja associar à nova turma.
+- A inclusão de grupos de alunos não precisa ser obrigatória; deve ser opcional.
 
 ![Alt Text](epic2-hist2.png)
 
 ### Backend:
 
-- Módulo `gerenciador_turmas.py` com funções para criar uma turma com/sem novo grupo de alunos.
-- Rotas de API:
-  - `/api/turmas/criar`: Manipula a criação de uma nova turma.
-  - `/api/grupos/listar`: Manipula a lista de grupos preexistentes.
+- Desenvolva um módulo chamado `gerenciador_turmas.py` com funções para criar uma turma com ou sem a associação de grupos de alunos.
+- Defina duas rotas de API:
+  1. `/api/turmas/criar`: Esta rota manipula a criação de uma nova turma e permite ao administrador especificar o nome da turma, o nome do professor e a associação opcional com grupos de alunos.
+  2. `/api/grupos/listar`: Esta rota manipula a listagem de grupos pré-existentes que podem ser associados a uma nova turma.
 
-## História de Usuário 3: Editar Turma e Adicionar Grupos
+### Fluxo de Atividade:
 
-**Como um administrador, eu quero editar as informações de uma turma e adicionar mais grupos.**
+1. O administrador acessa a página `criar_turma.html` no frontend.
+2. Na interface, são exibidos campos para inserir o nome da turma e o nome do professor, ambos obrigatórios.
+3. O administrador pode usar um campo para procurar por grupos pré-existentes ou listar grupos disponíveis.
+4. O administrador escolhe quais grupos deseja associar à nova turma.
+5. O administrador preenche os campos necessários e pode optar por associar grupos ou deixar a associação de grupos vazia.
+6. Ao clicar em "Salvar" ou "Criar Turma", o frontend envia uma solicitação HTTP POST para a rota de API `/api/turmas/criar`.
+7. O módulo `gerenciador_turmas.py` no backend processa a solicitação, cria a nova turma e, se aplicável, associa grupos de alunos a ela.
+8. A nova turma é criada e pode ser considerada ativa assim que grupos de alunos forem associados a ela.
+
+## História de Usuário 3: Editar Informações de Turma e Adicionar Grupos
+
+**Como um administrador, eu quero editar as informações de uma turma e adicionar grupos de alunos a ela.**
 
 ### Frontend:
 
-- Template HTML `editar_turma.html` que conterá os formulários de edição de uma nova turma, com possibilidade de edição de grupo e criação de novo grupo.
-- Todos os componentes da tela terão os IDs que podem ser mapeados aos IDs de turma.
+- Crie um template HTML chamado `editar_turma.html` que conterá os formulários para editar informações de uma turma existente.
+- Implemente a funcionalidade que permite editar os detalhes da turma, como nome e professor.
+- Ofereça a capacidade de adicionar novos grupos de alunos à turma ou editar grupos existentes.
+- Todos os componentes da tela devem ter IDs que podem ser mapeados aos IDs da turma.
 
 ![Alt Text](epic2-hist3.png)
 
 ### Backend:
 
-- Módulo `gerenciador_turmas.py` com funções para atualizar informações de turma e editar grupo de alunos.
-- Quando selecionar uma turma, a edição permitirá adicionar grupos.
-- Rotas de API:
-  - `/api/turmas/atualizar/{id}`: Manipula a atualização das informações de uma turma específica.
-  - `/api/grupos/atualizar/{id}`: Manipula a atualização das informações de um grupo de alunos específico.
+- Desenvolva um módulo chamado `gerenciador_turmas.py` com funções para atualizar informações de turma e editar grupos de alunos.
+- Defina duas rotas de API:
+  1. `/api/turmas/atualizar/{id}`: Esta rota manipula a atualização das informações de uma turma específica. O `{id}` identifica a turma que está sendo atualizada.
+  2. `/api/grupos/atualizar/{id}`: Esta rota manipula a atualização das informações de um grupo de alunos específico. O `{id}` identifica o grupo que está sendo atualizado.
 
-## História de Usuário 4: Excluir Turma
+### Fluxo de Atividade:
+
+1. O administrador acessa a página `editar_turma.html` no frontend.
+2. Na interface, são exibidos campos para editar as informações da turma, como nome e professor.
+3. O administrador pode clicar para editar grupos existentes ou adicionar novos grupos de alunos à turma.
+4. Todos os componentes da tela possuem IDs que podem ser mapeados aos IDs da turma, permitindo a associação direta de informações.
+5. Quando o administrador realiza edições, ele pode clicar em "Salvar" para confirmar as alterações.
+6. O frontend envia solicitações HTTP POST para as rotas de API correspondentes, `/api/turmas/atualizar/{id}` para turmas e `/api/grupos/atualizar/{id}` para grupos de alunos.
+7. O módulo `gerenciador_turmas.py` no backend processa as solicitações e atualiza as informações da turma e dos grupos de alunos conforme necessário.
+
+## História de Usuário 4: Excluir uma Turma
 
 **Como um administrador, eu quero excluir uma turma.**
 
 ### Frontend:
 
-- Ícone de exclusão do grupo.
+- Implemente um ícone de exclusão para cada turma na interface do usuário.
+- Quando o ícone de exclusão for clicado, ele deverá acionar uma confirmação do administrador antes de prosseguir com a exclusão.
 
 ![Alt Text](epic2-hist4.png)
 
 ### Backend:
 
-- Módulo `gerenciador_turmas.py` com funções para excluir turmas.
-- Rotas de API:
-  - `/api/turmas/excluir/{id}`: Manipula a exclusão de uma turma específica.
+- Desenvolva um módulo chamado `gerenciador_turmas.py` com funções para excluir turmas.
+- Defina uma rota de API: `/api/turmas/excluir/{id}`. O `{id}` identifica a turma que será excluída.
+
+### Fluxo de Atividade:
+
+1. O administrador acessa a página que exibe a lista de turmas no frontend.
+2. Na interface, cada turma é acompanhada de um ícone de exclusão.
+3. Quando o administrador clica no ícone de exclusão, uma confirmação é exibida para confirmar se ele deseja realmente excluir a turma.
+4. Após a confirmação, o frontend envia uma solicitação HTTP DELETE para a rota de API correspondente, por exemplo, `/api/turmas/excluir/{id}`.
+5. O módulo `gerenciador_turmas.py` no backend processa a solicitação e exclui a turma especificada do sistema.
 
 # Épico 6: Configurações Globais 🔴
 
