@@ -324,104 +324,106 @@
 
 Este arquivo contém informações sobre os alunos, identificados por números (por exemplo, "1" e "2"). Cada aluno tem um campo "nome" que armazena o nome dele.
 
-`````json
+```json
 {
-    "1": {
-        "nome": "Clara Santos"
-    },
-    "2": {
-        "nome": "Marcelo Tambalo"
-    }
+  "1": {
+    "nome": "Clara Santos"
+  },
+  "2": {
+    "nome": "Marcelo Tambalo"
+  }
 }
+```
 
 ## Tabela `global_setting.json`
 
 Este arquivo contém configurações globais do sistema, como a quantidade de sprints e a duração de cada sprint.
 
-````json
+```json
 {
-    "quantidade_sprint": 4,
-    "dias_sprint": 15
+  "quantidade_sprint": 4,
+  "dias_sprint": 15
 }
+```
 
 ## Tabela `grupo_alunos.json`
 
 Este arquivo associa cada aluno a um grupo específico. Cada aluno é identificado por um número, e cada entrada possui um campo "grupo" que indica a qual grupo o aluno pertence.
 
-````json
+```json
 {
-    "1": {
-        "grupo": 1
-    },
-    "2": {
-        "grupo": 2
-    }
+  "1": {
+    "grupo": 1
+  },
+  "2": {
+    "grupo": 2
+  }
 }
-
+```
 
 ## Tabela `grupos.json`
 
 Este arquivo contém informações sobre os grupos, identificados por números. Cada grupo tem um campo "turma" que indica a qual turma ele pertence.
 
-````json
+```json
 {
-    "1": {
-        "turma": 1
-    },
-    "2": {
-        "turma": 2
-    }
+  "1": {
+    "turma": 1
+  },
+  "2": {
+    "turma": 2
+  }
 }
-
+```
 
 ## Tabela `notas.json`
 
 Este arquivo registra as notas dos grupos em cada sprint. Cada aluno é identificado por um número, e para cada aluno, há uma lista de objetos que contêm informações sobre o grupo, o valor da nota e a sprint correspondente.
 
-````json
+```json
 {
-    "1": [
-        {
-            "grupo": 1,
-            "valor": 8,
-            "sprint": 1
-        },
-        {
-            "grupo": 2,
-            "valor": 6,
-            "sprint": 2
-        }
-    ],
-    "2": [
-        {
-            "grupo": 1,
-            "valor": 8,
-            "sprint": 1
-        },
-        {
-            "grupo": 1,
-            "valor": 6,
-            "sprint": 2
-        }
-    ]
+  "1": [
+    {
+      "grupo": 1,
+      "valor": 8,
+      "sprint": 1
+    },
+    {
+      "grupo": 2,
+      "valor": 6,
+      "sprint": 2
+    }
+  ],
+  "2": [
+    {
+      "grupo": 1,
+      "valor": 8,
+      "sprint": 1
+    },
+    {
+      "grupo": 1,
+      "valor": 6,
+      "sprint": 2
+    }
+  ]
 }
-
+```
 
 ## Tabela `turmas.json`
 
 Este arquivo contém informações sobre as turmas, identificadas por números. Cada turma tem um nome, um professor responsável e uma data de início.
 
-````json
+```json
 {
-    "1": {
-        "nome": "turma1",
-        "professor": "Nadalete",
-        "data_de_inicio": "21/02/2023"
-    },
-    "2": {
-        "nome": "Turma da manhã",
-        "professor": "Gorete",
-        "data_de_inicio": "21/02/2023"
-    }
+  "1": {
+    "nome": "turma1",
+    "professor": "Nadalete",
+    "data_de_inicio": "21/02/2023"
+  },
+  "2": {
+    "nome": "Turma da manhã",
+    "professor": "Gorete",
+    "data_de_inicio": "21/02/2023"
+  }
 }
-`````
+```
