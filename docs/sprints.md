@@ -318,7 +318,7 @@
 - Rotas de API:
   - /api/carregamento: Manipula o carregamento de dados a partir de arquivos.
 
-# **<p style="text-align:center;">Tabelas JSON:</p>**
+### **Tabelas JSON:**
 
 ## Tabela `alunos.json`
 
@@ -437,3 +437,137 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 - As configurações globais do sistema, como a quantidade de sprints e a duração de cada sprint, são definidas em global_setting.json.
 
 - Cada turma em turmas.json possui informações sobre seu nome, o professor responsável e a data de início.
+
+<h1> BACKLOG 2º SPRINT </h1>
+
+# Épico 2: Gerenciamento de Turmas 🔴
+
+## História de Usuário 1: Visualizar Lista de Turmas
+
+**Como um administrador, eu quero visualizar a lista de turmas disponíveis.**
+
+### Frontend:
+
+- `gerenciamento_turmas.html` que conterá todas as turmas já criadas com ícone de edição e de exclusão em cada um deles.
+- Botão "Criar Turma" que abrirá um modal.
+- Modal "Criar Turma" com campos para nome da turma, nome do professor e um botão "Salvar" que realizará um POST para `turmas.json`.
+- Um campo onde as turmas serão inseridas de forma dinâmica.
+- Botão para criar uma nova turma.
+
+![Alt text](epic2-hist1.png)
+
+### Backend:
+
+- Módulo `gerenciador_turmas.py` com funções para listar turmas.
+- Rotas de API:
+  - `/api/turmas/get`: Retorna a lista de turmas disponíveis.
+  - `/api/turmas/delete`: Deletar uma turma.
+
+## História de Usuário 2: Criar Nova Turma
+
+**Como um administrador, eu quero criar uma nova turma com nome da turma, o professor e a associação de grupos pré-existentes ou nenhum grupo. A turma não precisa ser criada com grupo de alunos, mas precisa poder recebê-los. A turma só será ativa com grupo de alunos vinculados.**
+
+### Frontend:
+
+- Template HTML `criar_turma.html` que conterá os formulários para criar uma nova turma.
+- A inclusão de grupos de alunos não precisa ser obrigatória.
+- Nome da turma e professor são obrigatórios.
+- Campo para procurar por um grupo pré-existente.
+- Campo para listar grupos.
+
+![Alt Text](epic2-hist2.png)
+
+### Backend:
+
+- Módulo `gerenciador_turmas.py` com funções para criar uma turma com/sem novo grupo de alunos.
+- Rotas de API:
+  - `/api/turmas/criar`: Manipula a criação de uma nova turma.
+  - `/api/grupos/listar`: Manipula a lista de grupos preexistentes.
+
+## História de Usuário 3: Editar Turma e Adicionar Grupos
+
+**Como um administrador, eu quero editar as informações de uma turma e adicionar mais grupos.**
+
+### Frontend:
+
+- Template HTML `editar_turma.html` que conterá os formulários de edição de uma nova turma, com possibilidade de edição de grupo e criação de novo grupo.
+- Todos os componentes da tela terão os IDs que podem ser mapeados aos IDs de turma.
+
+![Alt Text](epic2-hist3.png)
+
+### Backend:
+
+- Módulo `gerenciador_turmas.py` com funções para atualizar informações de turma e editar grupo de alunos.
+- Quando selecionar uma turma, a edição permitirá adicionar grupos.
+- Rotas de API:
+  - `/api/turmas/atualizar/{id}`: Manipula a atualização das informações de uma turma específica.
+  - `/api/grupos/atualizar/{id}`: Manipula a atualização das informações de um grupo de alunos específico.
+
+## História de Usuário 4: Excluir Turma
+
+**Como um administrador, eu quero excluir uma turma.**
+
+### Frontend:
+
+- Ícone de exclusão do grupo.
+
+![Alt Text](epic2-hist4.png)
+
+### Backend:
+
+- Módulo `gerenciador_turmas.py` com funções para excluir turmas.
+- Rotas de API:
+  - `/api/turmas/excluir/{id}`: Manipula a exclusão de uma turma específica.
+
+# Épico 6: Configurações Globais 🔴
+
+## História de Usuário 1: Visualizar Parâmetros Globais
+
+**Como um administrador, eu quero ver os parâmetros globais das turmas.**
+
+### Frontend:
+
+- Crie um template HTML que permita ao administrador visualizar os parâmetros globais, incluindo a quantidade de sprints e o tempo de cada sprint.
+- Exiba essas informações em uma interface de usuário clara e legível.
+  ![Alt Text](epic6-hist1.png)
+
+### Backend:
+
+- Desenvolva uma função no módulo `gerenciador_configuracoes.py` que permita listar os parâmetros globais das turmas.
+- Defina uma rota de API, por exemplo, `/api/globalsettings/get`, que o frontend pode acessar para recuperar os parâmetros globais das turmas.
+
+### Fluxo de Atividade:
+
+1. O administrador acessa a página no frontend designada para visualizar os parâmetros globais.
+2. O frontend envia uma solicitação HTTP GET para a rota de API `/api/globalsettings/get` no backend.
+3. A função no módulo `gerenciador_configuracoes.py` no backend processa a solicitação e recupera os parâmetros globais das turmas.
+4. Os parâmetros globais são enviados de volta ao frontend como uma resposta à solicitação.
+5. O frontend exibe os parâmetros globais na interface do usuário, permitindo que o administrador os visualize.
+
+## História de Usuário 2: Editar Parâmetros Globais
+
+**Como um administrador, eu quero editar parâmetros globais, como datas do período letivo.**
+
+### Frontend:
+
+- Crie um template HTML chamado `gerenciamento_global.html` que conterá o formulário para atualizar os parâmetros globais de cada turma.
+- Implemente uma validação para garantir que os campos sejam preenchidos antes de permitir a submissão do formulário.
+- Inclua um botão que permitirá ao administrador escrever as configurações atualizadas no arquivo `configuracoesglobais.json` por meio de um pedido HTTP POST.
+
+![Alt Text](epic6-hist2.png)
+
+### Backend:
+
+- Desenvolva um módulo chamado `gerenciador_configuracoes.py` que conterá uma função para atualizar os parâmetros globais no sistema.
+- Crie o arquivo `globalsettings.json` no banco de dados ou no sistema de armazenamento relevante para manter as configurações globais.
+- Defina uma rota de API para processar as atualizações dos parâmetros globais, por exemplo, `/api/globalsettings/{id}/post`, onde `{id}` identifica a turma ou entidade relevante para a qual os parâmetros estão sendo atualizados.
+
+### Fluxo de Atividade:
+
+1. O administrador acessa a página `gerenciamento_global.html` no frontend.
+2. O formulário é exibido, permitindo que o administrador edite os parâmetros globais, como quantidade de sprints e duração de sprints.
+3. O frontend valida os campos para garantir que todos estejam preenchidos corretamente.
+4. Após a validação bem-sucedida, o administrador clica no botão "Salvar".
+5. O frontend envia um pedido HTTP POST para a rota de API correspondente no backend.
+6. O módulo `gerenciador_configuracoes.py` no backend processa a solicitação, atualiza os parâmetros globais e salva as alterações no arquivo `globalsettings.json`.
+7. As configurações globais são atualizadas e refletem as mudanças feitas pelo administrador.
