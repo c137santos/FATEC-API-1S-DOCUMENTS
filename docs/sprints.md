@@ -427,3 +427,13 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
   }
 }
 ```
+
+# **<p style="text-align:center;">Resumo tabelas JSON:</p>**
+
+- Cada aluno (identificado em alunos.json) pertence a um grupo (especificado em grupo_alunos.json), e cada grupo está associado a uma turma (em grupos.json).
+
+- As notas dos grupos em cada sprint são registradas em notas.json e estão associadas ao grupo correspondente e à sprint.
+
+- As configurações globais do sistema, como a quantidade de sprints e a duração de cada sprint, são definidas em global_setting.json.
+
+- Cada turma em turmas.json possui informações sobre seu nome, o professor responsável e a data de início.
