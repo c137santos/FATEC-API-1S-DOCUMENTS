@@ -8,7 +8,7 @@ Esse roadmap tem como objetivo auxiliar os participantes do grupo a terem uma di
 - deixar todos com as mesmas informações, e com noções parecidas sobre as tecnologias utilizadas no projeto.
 - Iniciar e centralizar discussões sobre questões técnicas que o time está estudando atualmente.
 
-## Sumário:
+## Sumário
 
 - Introdução
 - Python Básico
