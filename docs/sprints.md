@@ -565,7 +565,7 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 4. Após a confirmação, o frontend envia uma solicitação HTTP DELETE para a rota de API correspondente, por exemplo, `/api/turmas/excluir/{id}`.
 5. O módulo `gerenciador_turmas.py` no backend processa a solicitação e exclui a turma especificada do sistema.
 
-## Épico 6: Configurações Globais 🔴
+### Épico 6: Configurações Globais 🔴
 
 #### História de Usuário 1: Visualizar Parâmetros Globais
 
