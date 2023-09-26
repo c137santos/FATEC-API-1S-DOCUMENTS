@@ -88,23 +88,57 @@ A maioria das funcionalidades git foram feitas pensando em problemas assim que f
     
     </aside>
     
-
 ### **Html e CSS**
 
-em construção 🚧
+Nosso front, também conhecido como a parte visual do nosso projeto. É onde o usuário vai interagir, clicar, ler informações, baixar pdf e etc.
+
+- Links úteis
+    
+    curso em vídeo do guanabara, muito boa e simples a explicação
+    
+    [Começa aqui o novo @CursoemVideo de HTML5 e CSS3](https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&pp=iAQB)
+    
+    w3 schools, um bom lugar pra vc ver snippets(pedacinhos de código), que você pode editar na web mesmo e ver os resultados. Uso bastante para lembrar de como funciona as sintaxe de determinado elemento.
+    
+    [HTML Tutorial](https://www.w3schools.com/html/)
+    
 
 ### JavaScript Básico
 
-em construção 🚧
+Enquanto o Html é o esqueleto do nosso front, o JavaSript é o sistema nervoso, é usando ele que a fente faz o site ficar reativo a mudanças feitas nele. como por exemplo clicar em um botão ou preencher um formulário
+
+- Links Úteis
+    
+    De novo, guanabara perfeito que sempre traz as melhores explicações das coisas. Vocês vão perceber que exceto a parte do DOM, dá pra relacionar muita coisa com o básico de python.
+    
+    [Curso Grátis de JavaScript e ECMAScript para Iniciantes](https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1)
+    
+    Esse site está em inglês, mas tem muita coisa explicada a fundo. Inclusive coisas mais avançadas, então não precisa ler tudo, só utilizar de complemento para os estudos:
+    
+    [The Modern JavaScript Tutorial](https://javascript.info/)
+    
 
 ### Protocolo HTTP
 
-em construção 🚧
+Http é um protocolo para a internet, que é base do funcionamento da internet. É como o nosso front no navegador vai se comunicar com o nosso back. EU entendo que é algo bem complexo de se entender, então se você não entender todos os conceitos, não se desespere dá pra gente andar sem saber de tudo.
+
+- Links úteis
+    
+    Sitezinho super útil que cobre o básico
+    
+    [O que é HTTP? - O guia para iniciantes · cardtunic](https://www.tabnews.com.br/cardtunic/o-que-e-http-o-guia-para-iniciantes)
+    
 
 ### APi (não a da Fatec)
 
-em construção 🚧
+Quando eu estava estudando me explicaram a API como o garçon, que sai da cozinha(o backend) com as informações que o cliente (front-end) vai consumir.
 
+- links úteis
+    
+    O protocolo https 
+    
+    [O Que é API  e Como Funciona? (API para Iniciantes / API O Que É / O Que é API em Programação)](https://www.youtube.com/watch?v=7QexxywcQhk&ab_channel=IlustraDev)
+    
 ### Frameworks
 
 em construção 🚧
