@@ -10,6 +10,9 @@ Para visitar como ela funciona, você pode visitar essa doc!
 * `mkdocs build` - Constroi a documentação
 * `mkdocs -h` - Devolve comandos de ajuda 
 
+## Roadmap sobre os principais assuntos a serem estudados:
+[Roadmap](/docs/roadmap.md)
+
 ## O que você vai encontrar nessa documentação?
 
 ### Backend
