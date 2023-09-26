@@ -2,13 +2,13 @@
 
 Esse roadmap tem como objetivo auxiliar os participantes do grupo a terem uma direção a seguir nos estudos para a criação e estruturação do projeto.
 
-O**s objetivos deste roadmap são:**
+**Os objetivos deste roadmap são:**
 
 - dar um caminho do que estudar, como e onde.
 - deixar todos com as mesmas informações, e com noções parecidas sobre as tecnologias utilizadas no projeto.
 - Iniciar e centralizar discussões sobre questões técnicas que o time está estudando atualmente.
 
-### Sumário:
+## Sumário:
 
 - Introdução
 - Python Básico
@@ -23,7 +23,7 @@ O**s objetivos deste roadmap são:**
 - Um pouquinho sobre soft skills e comunicação assíncrona
 - Dúvidas gerais que eu não consegui colocar em caixinhas
 
-### **Introdução**
+## **Introdução**
 
 Quando estamos tendo discussões sobre temáticas do nosso trabalho é fácil a gente fazer algo que é , jogar palavrinhas difíceis para cima, e esperar que as pessoas entendam o que a gente quer dizer. 
 

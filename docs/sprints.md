@@ -13,7 +13,7 @@
 
 ## Detalhamento dos Épicos
 
-## **Épico 1: Exportação de Dados**
+### **Épico 1: Exportação de Dados**
 
 #### **História de Usuário 1: Como um administrador, eu quero selecionar as opções de gerenciamento e relatórios. Isso envolve a exportação de dados.**
 
@@ -30,7 +30,7 @@
   - /api/relatorio/criar: Consolida os dados e exporta em formato PDF.
   - Consolida os dados e os exporta em formato PDF.
 
-## **Épico 2: Gerenciamento de Turmas**
+### **Épico 2: Gerenciamento de Turmas**
 
 #### **História de Usuário 1: Como um administrador, eu quero visualizar a lista de turmas disponíveis, seus respectivos grupos com os alunos e alunos.**
 
