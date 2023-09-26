@@ -1,21 +1,24 @@
-# Bem vindo a nossa documentação!
+# Bem vindo a nossa documentação da API do Team Bee!
 
-Essa documentação foi inteiramente escrita em mkdocs!
-Para visitar como ela funciona, você pode visitar essa doc! 
-[mkdocs.org](https://www.mkdocs.org).
-
-## Commandos para rodar essa documentação localmente
-
-* `mkdocs serve` - Inicia o projeto na sua máquina
-* `mkdocs build` - Constroi a documentação
-* `mkdocs -h` - Devolve comandos de ajuda 
+Essa documentação foi inteiramente escrita em mkdocs! Para visitar como ela funciona, você pode visitar essa doc! [mkdocs.org](https://www.mkdocs.org).
 
 ## Roadmap sobre os principais assuntos a serem estudados:
+Uma das principais dúvidas da equipe é: "por onde eu começo?". Diante disso, desenvolvemos um roadmap dos conhecimentos mínimos para dar o ponta pé inicial!
 [Roadmap](roadmap.md)
 
 ## O que você vai encontrar nessa documentação?
 
 ### Backend
+- [Implementação do WSGI PEP333](backend.md#wgsi)
+### Frontend
+
+- [Wireframe e fluxos do produto](frontend.md#wireframe-e-fluxos-do-produto)
+
+### Biblioteca
+
+Nessa biblioteca você vai encontrar nossas funções documentadas profundamente. 
+Além disso, materiais importante para compreender o funcionamento técnico do nosso projeto.
+
 - Git e github. Como você pode puxar atualizações e commitar no local correto?
     * [Como fazer o pull request no local correto.](biblioteca.md#como-fazer-o-pull-request-no-local-correto)
     * [Como se fosse a primeira vez: configurando upstream](biblioteca.md#como-se-fosse-a-primeira-vez-configurando-upstream)
@@ -23,10 +26,6 @@ Para visitar como ela funciona, você pode visitar essa doc!
 - Configurações do projeto. Como consigo rodar esse projeto na minha máquina?
     * [Virtualenvs](biblioteca.md#virtualenvs)
     * [Instale o pyenv](biblioteca.md#instale-o-pyenv)
-
-### Frontend
-
-- [Wireframe e fluxos do produto](frontend.md#wireframe-e-fluxos-do-produto)
 
 ## Metodológias ágeis - scrum
 
@@ -56,3 +55,9 @@ Times Auto Organizáveis Buscar por um conjunto restrito e muito simples de regr
 
 Reflexões regulares Compreender o processo em que está o desenvolvimento do software, assim como velocidade e dinamismo da equipe e cada um dos seus membros. Em conversas francas e dinâmicas de grupo.
 
+
+## Commandos para rodar essa documentação localmente
+
+* `mkdocs serve` - Inicia o projeto na sua máquina
+* `mkdocs build` - Constroi a documentação
+* `mkdocs -h` - Devolve comandos de ajuda 
