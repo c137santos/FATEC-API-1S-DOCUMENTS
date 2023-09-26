@@ -97,9 +97,7 @@
   - /api/turmas/excluir/{id}: Manipula a exclusão de uma turma específica.
   - /api/grupos/excluir/{id}: Manipula a exclusão de um grupo específico. (Vamos excluir o grupo?)
 
-### \*\*
-
-Épico 3: Gerenciamento de grupos\*\*
+### Épico 3: Gerenciamento de grupos
 
 #### **História de Usuário 1: Como administrador, quero ver todos os grupos formados e associados às turmas.**
 
@@ -149,7 +147,7 @@
 - Rotas de API:
   - /api/grupos/editar/{id}: Manipula para editar grupos.
 
-#### **História de Usuário 4: Como administrador, quero excluir os grupos fFrontend:**
+#### **História de Usuário 4: Como administrador, quero excluir os grupos Frontend:**
 
 - Template HTML para visualização de grupos:
   - visualizacar_grupos.html que conterá todos os grupos já criados com ícone de edição e de exclusão em cada um deles.
@@ -218,11 +216,14 @@
 - Módulo gerenciador_alunos.py com funções para excluir alunos.
 - Rotas de API: /api/alunos/excluir/{id}: Manipula a atualização das informações de um aluno específico.
 
-### **Épico 5: Gerenciamento de Ciclos de Entrega e Scores**
+### Épico 5: Gerenciamento de Ciclos de Entrega e Scores
+
 
 #### **História de Usuário 1: Como um administrador, eu quero visualizar(listar) as notas de um aluno.**
 
-**Preciso criar um campo para exibir o FEE total e parcial.** Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) + ... + (Score do Ciclo de Entrega N (CN) _ Peso de CN)) / Soma dos Pesos de C
+**Preciso criar um campo para exibir o FEE total e parcial.** 
+
+Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) + ... + (Score do Ciclo de Entrega N (CN) _ Peso de CN)) / Soma dos Pesos de C
 
 **Frontend:**
 
@@ -318,9 +319,10 @@
 - Rotas de API:
   - /api/carregamento: Manipula o carregamento de dados a partir de arquivos.
 
-<h1>Tabelas JSON:</h1>
 
-## Tabela `alunos.json`
+## <h1>Tabelas JSON:</h1>
+
+### Tabela `alunos.json`
 
 Este arquivo contém informações sobre os alunos, identificados por números (por exemplo, "1" e "2"). Cada aluno tem um campo "nome" que armazena o nome dele.
 
@@ -335,7 +337,7 @@ Este arquivo contém informações sobre os alunos, identificados por números (
 }
 ```
 
-## Tabela `global_setting.json`
+### Tabela `global_setting.json`
 
 Este arquivo contém configurações globais do sistema, como a quantidade de sprints e a duração de cada sprint.
 
@@ -346,7 +348,7 @@ Este arquivo contém configurações globais do sistema, como a quantidade de sp
 }
 ```
 
-## Tabela `grupo_alunos.json`
+### Tabela `grupo_alunos.json`
 
 Este arquivo associa cada aluno a um grupo específico. Cada aluno é identificado por um número, e cada entrada possui um campo "grupo" que indica a qual grupo o aluno pertence.
 
@@ -361,7 +363,7 @@ Este arquivo associa cada aluno a um grupo específico. Cada aluno é identifica
 }
 ```
 
-## Tabela `grupos.json`
+### Tabela `grupos.json`
 
 Este arquivo contém informações sobre os grupos, identificados por números. Cada grupo tem um campo "turma" que indica a qual turma ele pertence.
 
@@ -376,7 +378,7 @@ Este arquivo contém informações sobre os grupos, identificados por números. 
 }
 ```
 
-## Tabela `notas.json`
+### Tabela `notas.json`
 
 Este arquivo registra as notas dos grupos em cada sprint. Cada aluno é identificado por um número, e para cada aluno, há uma lista de objetos que contêm informações sobre o grupo, o valor da nota e a sprint correspondente.
 
@@ -409,7 +411,7 @@ Este arquivo registra as notas dos grupos em cada sprint. Cada aluno é identifi
 }
 ```
 
-## Tabela `turmas.json`
+### Tabela `turmas.json`
 
 Este arquivo contém informações sobre as turmas, identificadas por números. Cada turma tem um nome, um professor responsável e uma data de início.
 
@@ -428,7 +430,7 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 }
 ```
 
-## Resumo tabelas JSON:
+### Resumo tabelas JSON:
 
 - Cada aluno (identificado em alunos.json) pertence a um grupo (especificado em grupo_alunos.json), e cada grupo está associado a uma turma (em grupos.json).
 
@@ -438,15 +440,16 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 
 - Cada turma em turmas.json possui informações sobre seu nome, o professor responsável e a data de início.
 
-<h1> BACKLOG 2º SPRINT </h1>
+## <h1> BACKLOG 2º SPRINT </h1>
 
-# Épico 2: Gerenciamento de Turmas 🔴
+### Épico 2: Gerenciamento de Turmas 🔴
 
-## História de Usuário 1: Visualizar e Gerenciar Turmas Disponíveis
+#### História de Usuário 1: Visualizar e Gerenciar Turmas Disponíveis
+
 
 **Como um administrador, eu quero visualizar a lista de turmas disponíveis e gerenciá-las.**
 
-### Frontend:
+#### Frontend:
 
 - Crie um template HTML chamado `gerenciamento_turmas.html` que exibirá todas as turmas já criadas.
 - Na interface, liste as turmas existentes, incluindo um ícone de edição e um ícone de exclusão para cada turma.
@@ -457,14 +460,14 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 
 ![Alt text](epic2-hist1.png)
 
-### Backend:
+#### Backend:
 
 - Desenvolva um módulo chamado `gerenciador_turmas.py` com funções para listar turmas e deletar turmas.
 - Defina duas rotas de API:
   1. `/api/turmas/get`: Esta rota retorna a lista de turmas disponíveis como um JSON.
   2. `/api/turmas/delete`: Esta rota permite a exclusão de uma turma específica.
 
-### Fluxo de Atividade:
+#### Fluxo de Atividade:
 
 1. O administrador acessa a página `gerenciamento_turmas.html` no frontend.
 2. Na interface, a lista de turmas disponíveis é exibida com ícones de edição e exclusão para cada turma.
@@ -473,11 +476,12 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 5. O administrador preenche os campos e clica em "Salvar" para criar uma nova turma, que é adicionada dinamicamente à lista de turmas.
 6. O administrador pode usar o botão "Criar Nova Turma" para adicionar mais turmas conforme necessário.
 
-## História de Usuário 2: Criar Nova Turma com Associação Opcional de Grupos
+#### História de Usuário 2: Criar Nova Turma com Associação Opcional de Grupos
+
 
 **Como um administrador, eu quero criar uma nova turma com o nome da turma e o nome do professor, com a opção de associá-la a grupos pré-existentes, mas sem a obrigatoriedade de incluir grupos no momento da criação. A turma só será considerada ativa quando tiver grupos de alunos vinculados.**
 
-### Frontend:
+#### Frontend:
 
 - Crie um template HTML chamado `criar_turma.html` que conterá os formulários para criar uma nova turma.
 - Inclua campos obrigatórios para inserir o nome da turma e o nome do professor.
@@ -487,14 +491,14 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 
 ![Alt Text](epic2-hist2.png)
 
-### Backend:
+#### Backend:
 
 - Desenvolva um módulo chamado `gerenciador_turmas.py` com funções para criar uma turma com ou sem a associação de grupos de alunos.
 - Defina duas rotas de API:
   1. `/api/turmas/criar`: Esta rota manipula a criação de uma nova turma e permite ao administrador especificar o nome da turma, o nome do professor e a associação opcional com grupos de alunos.
   2. `/api/grupos/listar`: Esta rota manipula a listagem de grupos pré-existentes que podem ser associados a uma nova turma.
 
-### Fluxo de Atividade:
+#### Fluxo de Atividade:
 
 1. O administrador acessa a página `criar_turma.html` no frontend.
 2. Na interface, são exibidos campos para inserir o nome da turma e o nome do professor, ambos obrigatórios.
@@ -505,11 +509,12 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 7. O módulo `gerenciador_turmas.py` no backend processa a solicitação, cria a nova turma e, se aplicável, associa grupos de alunos a ela.
 8. A nova turma é criada e pode ser considerada ativa assim que grupos de alunos forem associados a ela.
 
-## História de Usuário 3: Editar Informações de Turma e Adicionar Grupos
+### História de Usuário 3: Editar Informações de Turma e Adicionar Grupos
+
 
 **Como um administrador, eu quero editar as informações de uma turma e adicionar grupos de alunos a ela.**
 
-### Frontend:
+#### Frontend:
 
 - Crie um template HTML chamado `editar_turma.html` que conterá os formulários para editar informações de uma turma existente.
 - Implemente a funcionalidade que permite editar os detalhes da turma, como nome e professor.
@@ -518,14 +523,14 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 
 ![Alt Text](epic2-hist3.png)
 
-### Backend:
+#### Backend:
 
 - Desenvolva um módulo chamado `gerenciador_turmas.py` com funções para atualizar informações de turma e editar grupos de alunos.
 - Defina duas rotas de API:
   1. `/api/turmas/atualizar/{id}`: Esta rota manipula a atualização das informações de uma turma específica. O `{id}` identifica a turma que está sendo atualizada.
   2. `/api/grupos/atualizar/{id}`: Esta rota manipula a atualização das informações de um grupo de alunos específico. O `{id}` identifica o grupo que está sendo atualizado.
 
-### Fluxo de Atividade:
+#### Fluxo de Atividade:
 
 1. O administrador acessa a página `editar_turma.html` no frontend.
 2. Na interface, são exibidos campos para editar as informações da turma, como nome e professor.
@@ -535,23 +540,24 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 6. O frontend envia solicitações HTTP POST para as rotas de API correspondentes, `/api/turmas/atualizar/{id}` para turmas e `/api/grupos/atualizar/{id}` para grupos de alunos.
 7. O módulo `gerenciador_turmas.py` no backend processa as solicitações e atualiza as informações da turma e dos grupos de alunos conforme necessário.
 
-## História de Usuário 4: Excluir uma Turma
+### História de Usuário 4: Excluir uma Turma
+
 
 **Como um administrador, eu quero excluir uma turma.**
 
-### Frontend:
+#### Frontend:
 
 - Implemente um ícone de exclusão para cada turma na interface do usuário.
 - Quando o ícone de exclusão for clicado, ele deverá acionar uma confirmação do administrador antes de prosseguir com a exclusão.
 
 ![Alt Text](epic2-hist4.png)
 
-### Backend:
+#### Backend:
 
 - Desenvolva um módulo chamado `gerenciador_turmas.py` com funções para excluir turmas.
 - Defina uma rota de API: `/api/turmas/excluir/{id}`. O `{id}` identifica a turma que será excluída.
 
-### Fluxo de Atividade:
+#### Fluxo de Atividade:
 
 1. O administrador acessa a página que exibe a lista de turmas no frontend.
 2. Na interface, cada turma é acompanhada de um ícone de exclusão.
@@ -559,24 +565,24 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 4. Após a confirmação, o frontend envia uma solicitação HTTP DELETE para a rota de API correspondente, por exemplo, `/api/turmas/excluir/{id}`.
 5. O módulo `gerenciador_turmas.py` no backend processa a solicitação e exclui a turma especificada do sistema.
 
-# Épico 6: Configurações Globais 🔴
+## Épico 6: Configurações Globais 🔴
 
-## História de Usuário 1: Visualizar Parâmetros Globais
+#### História de Usuário 1: Visualizar Parâmetros Globais
 
 **Como um administrador, eu quero ver os parâmetros globais das turmas.**
 
-### Frontend:
+#### Frontend:
 
 - Crie um template HTML que permita ao administrador visualizar os parâmetros globais, incluindo a quantidade de sprints e o tempo de cada sprint.
 - Exiba essas informações em uma interface de usuário clara e legível.
   ![Alt Text](epic6-hist1.png)
 
-### Backend:
+#### Backend:
 
 - Desenvolva uma função no módulo `gerenciador_configuracoes.py` que permita listar os parâmetros globais das turmas.
 - Defina uma rota de API, por exemplo, `/api/globalsettings/get`, que o frontend pode acessar para recuperar os parâmetros globais das turmas.
 
-### Fluxo de Atividade:
+#### Fluxo de Atividade:
 
 1. O administrador acessa a página no frontend designada para visualizar os parâmetros globais.
 2. O frontend envia uma solicitação HTTP GET para a rota de API `/api/globalsettings/get` no backend.
@@ -584,11 +590,11 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 4. Os parâmetros globais são enviados de volta ao frontend como uma resposta à solicitação.
 5. O frontend exibe os parâmetros globais na interface do usuário, permitindo que o administrador os visualize.
 
-## História de Usuário 2: Editar Parâmetros Globais
+### História de Usuário 2: Editar Parâmetros Globais
 
 **Como um administrador, eu quero editar parâmetros globais, como datas do período letivo.**
 
-### Frontend:
+#### Frontend:
 
 - Crie um template HTML chamado `gerenciamento_global.html` que conterá o formulário para atualizar os parâmetros globais de cada turma.
 - Implemente uma validação para garantir que os campos sejam preenchidos antes de permitir a submissão do formulário.
@@ -596,13 +602,13 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 
 ![Alt Text](epic6-hist2.png)
 
-### Backend:
+#### Backend:
 
 - Desenvolva um módulo chamado `gerenciador_configuracoes.py` que conterá uma função para atualizar os parâmetros globais no sistema.
 - Crie o arquivo `globalsettings.json` no banco de dados ou no sistema de armazenamento relevante para manter as configurações globais.
 - Defina uma rota de API para processar as atualizações dos parâmetros globais, por exemplo, `/api/globalsettings/{id}/post`, onde `{id}` identifica a turma ou entidade relevante para a qual os parâmetros estão sendo atualizados.
 
-### Fluxo de Atividade:
+#### Fluxo de Atividade:
 
 1. O administrador acessa a página `gerenciamento_global.html` no frontend.
 2. O formulário é exibido, permitindo que o administrador edite os parâmetros globais, como quantidade de sprints e duração de sprints.
