@@ -2,6 +2,7 @@ site_name: Fatequinha
 nav:
   - Home: index.md
   - Biblioteca: biblioteca.md
+  - roadmap: roadmap.md 
   - Backend: backend.md
   - Frontend: frontend.md
   - Sprints: sprints.md

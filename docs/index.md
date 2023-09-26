@@ -11,7 +11,7 @@ Para visitar como ela funciona, você pode visitar essa doc!
 * `mkdocs -h` - Devolve comandos de ajuda 
 
 ## Roadmap sobre os principais assuntos a serem estudados:
-[Roadmap](/docs/roadmap.md)
+[Roadmap](roadmap.md)
 
 ## O que você vai encontrar nessa documentação?
 
