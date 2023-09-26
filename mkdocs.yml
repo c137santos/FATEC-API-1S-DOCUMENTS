@@ -6,6 +6,7 @@ nav:
   - Backend: backend.md
   - Frontend: frontend.md
   - Sprints: sprints.md
+  - Retros: retros.md
 theme:
   name: mkdocs
   nav_style: dark
