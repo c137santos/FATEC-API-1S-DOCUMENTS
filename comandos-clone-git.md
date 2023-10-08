@@ -1,30 +1,34 @@
 ## Comandos para executar o clone no git
-1° passo: ir no repositório do GitHub e clicar em "code", depois https e copiar o link.
 
-2° passo: ir no terminar (Windows Power Shell) e criar uma pasta:
+### Passo 1: pegando o link do repositório 
+Ir no repositório do GitHub e clicar em "code", depois https e copiar o link.
 
+### Passo 2: criando uma pasta para o repositório
+Ir no terminar (Windows Power Shell) e criar uma pasta:
+
+````shell
 mkdir Pasta
-
 cd Pasta
+```` 
 
-3° passo: git clone copiar-o-link-obtido-do-github
+### Passo 3: clonando o repositório e abrindo no VSCode
 
-4° passo: cd nome-do-projeto
+````shell
+git clone copiar-o-link-obtido-do-github
+cd nome-do-projeto
+git fetch origin
+git checkout -b nome-do-projeto origin/nome-do-projeto
+git branch -a
+git pull
+code .
+````
 
-5° passo: git fetch origin
+### Passo 4: comitando no repositório após as alterações
+Após fazer as alterações no código seguir os proximos passos para comitar:
 
-6° passo: git checkout -b nome-do-projeto origin/nome-do-projeto
+````shell
+git add . 
+commit -m adicionar-novo-arquivo
+git push
+````
 
-7° passo: git branch -a
-
-8° passo: git pull
-
-9° passo: code .
-
-Faz as mudanças
-
-10° passo: git add . 
-
-11° passo: commit -m adicionar-novo-arquivo
-
-12° passo: git push
