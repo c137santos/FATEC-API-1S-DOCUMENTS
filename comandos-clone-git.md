@@ -1,3 +1,4 @@
+## Comandos para executar o clone no git
 1° passo: ir no repositório do GitHub e clicar em "code", depois https e copiar o link.
 
 2° passo: ir no terminar (Windows Power Shell) e criar uma pasta:
