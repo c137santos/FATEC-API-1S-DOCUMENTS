@@ -269,8 +269,8 @@ Para olhar para o frontend http://127.0.0.1:5500/
 
 
 ## Diferença entre JSON e CSV
-# [JSON (JavaScript Object Notation):](https://www.json.org/json-en.html)
-O JSON é um formato de dados que é comumente usado para trocar informações estruturadas entre sistemas. Ele é fácil de ler e escrever tanto para humanos quanto para máquinas. Um arquivo JSON possui as seguintes características:
+
+[JSON (JavaScript Object Notation):](https://www.json.org/json-en.html) O JSON é um formato de dados que é comumente usado para trocar informações estruturadas entre sistemas. Ele é fácil de ler e escrever tanto para humanos quanto para máquinas. Um arquivo JSON possui as seguintes características:
 
 - **Sintaxe**:
     
@@ -303,9 +303,7 @@ O JSON é um formato de dados que é comumente usado para trocar informações e
 	- Pode ser menos eficiente em termos de espaço quando comparado ao CSV para grandes conjuntos de dados tabulares simples.
 
 
-# [CSV (Comma-Separated Values):](https://docs.python.org/3/library/csv.html)
-
-O CSV é um formato simples para armazenar dados em formato tabular, onde as colunas são separadas por vírgulas e as linhas são separadas por quebras de linha. Cada linha representa um registro e cada campo (valor) é separado por uma vírgula.
+[CSV (Comma-Separated Values):](https://docs.python.org/3/library/csv.html) O CSV é um formato simples para armazenar dados em formato tabular, onde as colunas são separadas por vírgulas e as linhas são separadas por quebras de linha. Cada linha representa um registro e cada campo (valor) é separado por uma vírgula.
 
 - **Sintaxe**:
     
@@ -329,7 +327,6 @@ Caio,33,caiopalma@gmail.com
 	- Não suporta estruturas de dados complexas diretamente (como objetos aninhados).
 
 **Resumo:**  A escolha entre JSON e CSV dependerá do tipo de dados que você está manipulando e das necessidades específicas do seu aplicativo ou uso. JSON é mais adequado para dados complexos e aninhados, enquanto CSV é excelente para dados tabulares simples e eficiência de armazenamento.
-
 
 https://docs.python.org/3/library/csv.html
 
@@ -368,4 +365,3 @@ git add .
 commit -m adicionar-novo-arquivo
 git push
 ````
-
