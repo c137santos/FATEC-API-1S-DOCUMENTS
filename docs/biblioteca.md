@@ -80,13 +80,41 @@ Agora sua branch trará todas as atualização dessa branch da upstream. É a pa
 
 
 ### Depois de ter branch s-01 criada!
+Primeira opção para sincronizar seu projeto - syncfork
 
 Entrou para trabalhar e precisa puxar atualizações dos colegas? Simples. 
 
-No terminal, mude para branch 
+Abra seu repositório no GitHub
+
+No seu Repositório mude para a branch : S-02/main-segunda-sprint
+
+Sincronize seu Fork:
+![Alt text](fork.jpeg)
+
+Abra seu projeto na máquina
+
+No terminal, mude para branch S-02/main-segunda-sprint
 
 ```
-git switch S-01/main-primeira-sprint
+Rode o comando git pull
+```
+
+Agora mude para a branch que esta trabalhando na sua máquina
+
+```
+Use o comando git merge S-02/main-segunda-sprint
+```
+
+Agora a branch que esta trabalhando na sua maquina esta sincronizada com as branch S-02/main-segunda-sprint
+
+Commite
+
+### Outra opção de sincronização: upstream - sem precisar sincronizar o fork
+
+No seu projeto, com comandos apenas do terminal, comece indo para a branch principal da sprint. Nesse exemplo, a S-02!
+
+```
+git switch S-02/main-primeira-sprint
 ```
 
 Rode o comando para trazer as atualizações.
