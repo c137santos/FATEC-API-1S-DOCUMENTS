@@ -91,24 +91,26 @@ No seu Repositório mude para a branch : S-02/main-segunda-sprint
 Sincronize seu Fork:
 ![Alt text](fork.jpeg)
 
-Abra seu projeto na máquina
-
-No terminal, mude para branch S-02/main-segunda-sprint
+Abra seu projeto na máquina. NO SEU VSCode, no seu projeto! Mude para branch S-02/main-segunda-sprint, abra o terminal e rode o comando
 
 ```
-Rode o comando git pull
+git pull
+```
+É possível que nesse passo você tenha que lidar com alguns conflitos. Resolva-os com calma!
+Agora mude para a branch que esta trabalhando na sua máquina, use o comando git merge no terminal:
+
+```
+git merge S-02/main-segunda-sprint
 ```
 
-Agora mude para a branch que esta trabalhando na sua máquina
+É possível que nesse passo você tenha que lidar com alguns conflitos. Resolva-os com calma!
+
+Depois disso, agora a branch que esta trabalhando na sua máquina esta sincronizada com as branch S-02/main-segunda-sprint.
+Seu VSCode vai sugerir que você commite as mudanças, e isso é importante!
 
 ```
-Use o comando git merge S-02/main-segunda-sprint
+git push
 ```
-
-Agora a branch que esta trabalhando na sua maquina esta sincronizada com as branch S-02/main-segunda-sprint
-
-Commite
-
 ### Outra opção de sincronização: upstream - sem precisar sincronizar o fork
 
 No seu projeto, com comandos apenas do terminal, comece indo para a branch principal da sprint. Nesse exemplo, a S-02!
