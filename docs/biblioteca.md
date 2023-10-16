@@ -80,13 +80,43 @@ Agora sua branch trará todas as atualização dessa branch da upstream. É a pa
 
 
 ### Depois de ter branch s-01 criada!
+Primeira opção para sincronizar seu projeto - syncfork
 
 Entrou para trabalhar e precisa puxar atualizações dos colegas? Simples. 
 
-No terminal, mude para branch 
+Abra seu repositório no GitHub
+
+No seu Repositório mude para a branch : S-02/main-segunda-sprint
+
+Sincronize seu Fork:
+![Alt text](fork.jpeg)
+
+Abra seu projeto na máquina. NO SEU VSCode, no seu projeto! Mude para branch S-02/main-segunda-sprint, abra o terminal e rode o comando
 
 ```
-git switch S-01/main-primeira-sprint
+git pull
+```
+É possível que nesse passo você tenha que lidar com alguns conflitos. Resolva-os com calma!
+Agora mude para a branch que esta trabalhando na sua máquina, use o comando git merge no terminal:
+
+```
+git merge S-02/main-segunda-sprint
+```
+
+É possível que nesse passo você tenha que lidar com alguns conflitos. Resolva-os com calma!
+
+Depois disso, agora a branch que esta trabalhando na sua máquina esta sincronizada com as branch S-02/main-segunda-sprint.
+Seu VSCode vai sugerir que você commite as mudanças, e isso é importante!
+
+```
+git push
+```
+### Outra opção de sincronização: upstream - sem precisar sincronizar o fork
+
+No seu projeto, com comandos apenas do terminal, comece indo para a branch principal da sprint. Nesse exemplo, a S-02!
+
+```
+git switch S-02/main-primeira-sprint
 ```
 
 Rode o comando para trazer as atualizações.
@@ -327,3 +357,41 @@ Caio,33,caiopalma@gmail.com
 	- Não suporta estruturas de dados complexas diretamente (como objetos aninhados).
 
 **Resumo:**  A escolha entre JSON e CSV dependerá do tipo de dados que você está manipulando e das necessidades específicas do seu aplicativo ou uso. JSON é mais adequado para dados complexos e aninhados, enquanto CSV é excelente para dados tabulares simples e eficiência de armazenamento.
+
+https://docs.python.org/3/library/csv.html
+
+https://www.json.org/json-en.html
+
+## Comandos para executar o clone no git
+
+### Passo 1: pegando o link do repositório 
+Ir no repositório do GitHub e clicar em "code", depois https e copiar o link.
+
+### Passo 2: criando uma pasta para o repositório
+Ir no terminar (Windows Power Shell) e criar uma pasta:
+
+````shell
+mkdir Pasta
+cd Pasta
+```` 
+
+### Passo 3: clonando o repositório e abrindo no VSCode
+
+````shell
+git clone copiar-o-link-obtido-do-github
+cd nome-do-projeto
+git fetch origin
+git checkout -b nome-do-projeto origin/nome-do-projeto
+git branch -a
+git pull
+code .
+````
+
+### Passo 4: comitando no repositório após as alterações
+Após fazer as alterações no código seguir os proximos passos para comitar:
+
+````shell
+git add . 
+commit -m adicionar-novo-arquivo
+git push
+````
