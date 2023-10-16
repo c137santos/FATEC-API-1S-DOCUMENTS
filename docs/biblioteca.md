@@ -89,7 +89,7 @@ Abra seu repositório no GitHub
 No seu Repositório mude para a branch : S-02/main-segunda-sprint
 
 Sincronize seu Fork:
-![Alt text](fork.jpeg)
+![Alt text](./imgs/fork.jpeg)
 
 Abra seu projeto na máquina. NO SEU VSCode, no seu projeto! Mude para branch S-02/main-segunda-sprint, abra o terminal e rode o comando
 
