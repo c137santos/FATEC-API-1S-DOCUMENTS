@@ -37,3 +37,19 @@ O código de status da resposta indica o resultado da solicitação. Por exemplo
 Os cabeçalhos da resposta fornecem informações adicionais sobre a resposta. Por exemplo, o cabeçalho Content-Type indica o tipo de conteúdo da resposta.
 
 É importante entender o que são as classes HTTPRequest, JesonResponse e HttpResponse. Pois elas serão usadas nas nossas funcoes_request_response.
+
+### Urls
+
+Receitinha básica:
+
+```jsx
+api/v1/modulo/verbo/parâmetro(se houver)
+```
+
+**api/v1** é padrão e todas as urls devem começar assim.
+
+**MODULO** - é a parte da qual essa api pertence. Ex:aluno, turma, grupo, globalSettings.
+
+**VERBO** - ação que essa api faz: listar, deletar, atualizar, criar
+
+**PARÂMETRO** - não obrigatório, depende do endpoint mas o parâmetro mas deve ter o nome em PORTUGUÊS.
