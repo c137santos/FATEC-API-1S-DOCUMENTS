@@ -8,7 +8,7 @@
 - **Gerenciamento de Alunos** : Esse épico lida com a adição, atualização e visualização de informações de alunos, bem como a adição de notas parciais, todos os quais são interações do usuário com a interface.
 - **Gerenciamento de Ciclos de Entrega e Scores:** Este épico envolve a criação, atualização e visualização de ciclos de entrega e scores parciais, que são aspectos visíveis para o usuário.
 - **Configurações Globais (Back-end):** Este épico envolve a definição de parâmetros globais e o afeta o funcionamento do sistema. Essa configuração geralmente é tratada no back-end.
-- **Importação de Dados massivo (Back-end):** A tarefa de carregar informações de alunos e scores a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.
+- **Carregamento de Dados massivo de Alunos (Back-end):** A tarefa de carregar informações de alunos a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.
 
 # Detalhamento dos Épicos
 
