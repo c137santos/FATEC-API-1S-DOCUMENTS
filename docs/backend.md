@@ -17,12 +17,12 @@ A nossa função recebe o nome de  "retorna_response(environ, start_response)".
 
 Ao executar o comando 'python3 wgsi.py', server deixa disponível na porta 8080 o acesso para nosso backend. Quando alguém acessar essa porta, então será executado o **retorna_response**, terceiro parâmetro da função make_server(). 
 
-![Alt text](image-3.png)
+![Alt text](./imgs/image-3.png)
 
 A função **retorna_response()** é a função principal de um servidor WSGI. Ela recebe uma solicitação do navegador (através do parâmetro environ) e retorna uma resposta (através do parâmetro start_response).
 
 
-![Alt text](image-4.png)
+![Alt text](./imgs/image-4.png)
 
 O primeiro passo da função é criar uma instância de HTTPRequest a partir do dicionário environ. O objeto HTTPRequest representa a solicitação do navegador. Ele contém informações como o método HTTP, os cabeçalhos, a URL, os parâmetros de consulta e outras informações relacionadas à solicitação.
 

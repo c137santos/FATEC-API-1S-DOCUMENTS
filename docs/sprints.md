@@ -7,13 +7,13 @@
 - **Gerenciamento de grupo** : Esse épico está relacionado à criação, atualização e visualização de grupos, que envolvem a interface do usuário para realizar essas operações.
 - **Gerenciamento de Alunos** : Esse épico lida com a adição, atualização e visualização de informações de alunos, bem como a adição de notas parciais, todos os quais são interações do usuário com a interface.
 - **Gerenciamento de Ciclos de Entrega e Scores:** Este épico envolve a criação, atualização e visualização de ciclos de entrega e scores parciais, que são aspectos visíveis para o usuário.
-- **Visibilidade e Acompanhamento:** Esse épico visa fornecer informações objetivas sobre turmas, grupos de alunos, etc. A apresentação dessas informações é uma preocupação do front-end.
 - **Configurações Globais (Back-end):** Este épico envolve a definição de parâmetros globais e o afeta o funcionamento do sistema. Essa configuração geralmente é tratada no back-end.
 - **Importação de Dados massivo (Back-end):** A tarefa de carregar informações de alunos e scores a partir de arquivos é uma operação que envolve o back-end, pois requer manipulação de dados.
 
 # Detalhamento dos Épicos
 
 ## **Épico 1: Exportação de Dados**
+🟠 Prioridade média
 
 ### **História de Usuário 1: Como um administrador, eu quero selecionar as opções de gerenciamento e relatórios. Isso envolve a exportação de dados.**
 
@@ -21,7 +21,7 @@
 
 - Botão no Index.html que gere relatórios vindo dos: gerenciamento_turmas.html, gerenciamento_alunos.html, gerenciamento_ciclos.html, gerenciamento_global.html.
 
-![Alt text](epic1-hist1.png)
+![Alt text](./imgs/epic1-hist1.png)
 
 **Backend:**
 
@@ -40,7 +40,7 @@
 - Deverá ser criado um campo onde serão inseridas as turmas de forma dinâmica.
 - Botão para criar uma nova turma.
 
-![Alt Text](epic2-hist1.png)
+![Alt text](./imgs/epic2-hist1.png)
 
 **Backend**
 
@@ -61,7 +61,7 @@
   - Campo para procurar por um grupo pré-existente
   - Campo para listar grupos
 
-![Alt Text](epic2-hist2.png)
+![Alt text](./imgs/epic2-hist2.png)
 
 **Backend:**
 
@@ -76,7 +76,7 @@
 - Template HTML para Gerenciamento de Turmas:
   - editar_turmas.html que conterá os formulários de edição de uma nova turma, com possibilidade de ser levada a edição de grupo e de criar novo grupo.
 
-![Alt Text](epic2-hist3.png)
+![Alt text](./imgs/epic2-hist3.png)
 
 - Módulo gerenciador_turmas.py com funções para atualizar informações de turma e editar grupo de alunos.
 - Rotas de API:
@@ -90,7 +90,7 @@
 
     	Ícone de exclusão do grupo
 
-![Alt Text](epic2-hist4.png)
+![Alt text](./imgs/epic2-hist4.png)
 
 - Módulo gerenciador_turmas.py com funções para excluir turmas.
 - Rotas de API:
@@ -98,6 +98,7 @@
   - /api/grupos/excluir/{id}: Manipula a exclusão de um grupo específico. (Vamos excluir o grupo?)
 
 ## Épico 3: Gerenciamento de grupos
+🔴 Prioridade Alta
 
 ### **História de Usuário 1: Como administrador, quero ver todos os grupos formados e associados às turmas.**
 
@@ -107,7 +108,7 @@
   - gerenciamento_grupos.html que conterá todos os grupos já criados com ícone de edição e de exclusão em cada um deles.
   - Cada grupo deve apresentar seu nome e respectiva turma.
 
-![Alt text](epic3-hist1.png)
+![Alt text](./imgs/epic3-hist1.png)
 
 **Backend:**
 
@@ -117,7 +118,7 @@
 
 ### **História do usuário 2: Como um administrador, eu quero criar grupos de alunos associado a uma turma.**
 
-![Alt text](epic3-hist2.png)
+![Alt text](./imgs/epic3-hist2.png)
 **Frontend**
 
 - Template HTML para criar um grupo:
@@ -139,7 +140,7 @@
 - Template HTML para Gerenciamento de um grupo:
   - editar_grupo.html conterá as informações do grupo selecionado
   - Pode levar a visualização das notas do aluno.  
-    ![Alt text](epic3-hist3.png)
+    ![Alt text](./imgs/epic3-hist3.png)
 
 **Backend:**
 
@@ -152,7 +153,7 @@
 - Template HTML para visualização de grupos:
   - visualizacar_grupos.html que conterá todos os grupos já criados com ícone de edição e de exclusão em cada um deles.
   - O ícone deve acionar a ação de excluir
-    ![Alt text](epic3-hist4.png)
+    ![Alt text](./imgs/epic3-hist4.png)
 
 **Backend:**
 
@@ -161,6 +162,7 @@
   - /api/grupos/excluir/{id}: Manipula a listagem de grupos, excluindo o selecionado.
 
 ## **Épico 4: Gerenciamento de Alunos**
+🔴 Prioridade Alta
 
 ### **História de Usuário 1: Como um administrador, eu quero listar alunos existentes.**
 
@@ -169,7 +171,7 @@
 - Template HTML para listar Alunos:
   - gerenciamento_alunos.html que conterá um buscador e uma lista de alunos existentes, com botão para edição e de exclusão, e hiperlink para as notas do aluno
 
-![Alt text](epic4-hist1.png)  
+![Alt text](./imgs/epic4-hist1.png)  
 **Backend**
 
 - Módulo gerenciador_alunos.py com funções para listar um aluno.
@@ -182,7 +184,7 @@
 
 - Template HTML para Adicionar Alunos:
   - gerenciamento_alunos.html que conterá o formulário para adicionar um novo aluno  
-    ![Alt text](epic4-hist2.png)
+    ![Alt text](./imgs/epic4-hist2.png)
 
 **Backend**
 
@@ -196,7 +198,7 @@
 
 - Template HTML para editar aluno:
   - edicao_alunos.html que conterá o formulário para adicionar um novo aluno  
-    ![Alt text](epic4-hist3.png)
+    ![Alt text](./imgs/epic4-hist3.png)
 
 **Backend:**
 
@@ -209,7 +211,7 @@
 
 - Template HTML para editar aluno :
   - gerenciamento_alunos.html que um botão para exclusão do aluno  
-    ![Alt text](epic4-hist4.png)
+    ![Alt text](./imgs/epic4-hist4.png)
 
 **Backend:**
 
@@ -217,6 +219,7 @@
 - Rotas de API: /api/alunos/excluir/{id}: Manipula a atualização das informações de um aluno específico.
 
 ## Épico 5: Gerenciamento de Ciclos de Entrega e Scores
+🟠 Prioridade média
 
 
 ### **História de Usuário 1: Como um administrador, eu quero visualizar(listar) as notas de um aluno.**
@@ -228,7 +231,7 @@ Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) +
 **Frontend:**
 
 - Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html que conterá o aluno, as turmas que estão matriculadas e as respectivas novas.  
-  ![Alt text](epic5-hist1.png)
+  ![Alt text](./imgs/epic5-hist1.png)
 
 **Backend:**
 
@@ -240,7 +243,7 @@ Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) +
 **Frontend:**
 
 - Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html que conterá os formulários para criar uma nova nota associada a uma turma.
-  ![Alt text](epic5-hist2.png)
+  ![Alt text](./imgs/epic5-hist2.png)
 
 **Backend:**
 
@@ -252,7 +255,7 @@ Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) +
 **Frontend:**
 
 - Template HTML para Gerenciamento de Ciclos de Entrega: editar_nota.html que conterá os formulários para editar uma nota pré-existente associada a uma turma.  
-  ![Alt text](epic5-hist3.png)
+  ![Alt text](./imgs/epic5-hist3.png)
 
 **Backend:**
 
@@ -265,7 +268,7 @@ Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) +
 **Frontend:**
 
 - Template HTML para Gerenciamento de Ciclos de Entrega: gerenciamento_ciclos.html que conterá um ícone que deletar a nota de um aluno associado a um ciclo e uma turma.  
-  ![Alt text](epic5-hist4.png)
+  ![Alt text](./imgs/epic5-hist4.png)
 
 **Backend:**
 
@@ -280,7 +283,7 @@ Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) +
 **Frontend:**
 
 - Template HTML para Gerenciamento Global: gerenciamento_global.html que conterá as turmas existentes com seus respectivos parametros globais. Todas devem conter seu botão de editar.  
-  ![Alt text](epic6-hist1.png)
+  ![Alt text](./imgs/epic6-hist1.png)
 
 **Backend:**
 
@@ -293,7 +296,7 @@ Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) +
 **Frontend:**
 
 - Template HTML para Gerenciamento Global: gerenciamento_global.html que conterá os formulários para atualizar os parâmetros globais de cada turma.
-  ![Alt text](epic6-hist2.png)
+  ![Alt text](./imgs/epic6-hist2.png)
 
 **Backend:**
 
@@ -302,6 +305,7 @@ Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) +
   - para manipular a atualização dos parâmetros globais.
 
 ## **Épico 7: Carregamento de Dados massivo**
+🟠 Prioridade média
 
 ### **História de Usuário 1: Como um administrador, eu quero carregar informações de alunos partir de arquivos.**
 
@@ -309,7 +313,7 @@ Qual o cálculo do FEE? FEE = ((Score do Ciclo de Entrega 1 (C1) _ Peso de C1) +
 
 - Tela de index.html terá um botão para update para o carregamento do CSV
 - Sugestão ( botão que faz download de uma planilha padrão de sugestão para a importação do CSV)  
-  ![Alt text](epic7-hist1.png)
+  ![Alt text](./imgs/epic7-hist1.png)
 
 **Backend:**
 
@@ -442,7 +446,8 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 
 ## <h1> BACKLOG 2º SPRINT </h1>
 
-## Épico 2: Gerenciamento de Turmas 🔴
+## Épico 2: Gerenciamento de Turmas 
+🔴 Prioridade Alta
 
 ### História de Usuário 1: Visualizar e Gerenciar Turmas Disponíveis
 
@@ -458,7 +463,7 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 - Implemente um campo onde as turmas serão inseridas de forma dinâmica.
 - Forneça um botão "Criar Nova Turma" para facilitar a criação de turmas.
 
-![Alt text](epic2-hist1.png)
+![Alt text](./imgs/epic2-hist1.png)
 
 #### Backend:
 
@@ -489,7 +494,7 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 - Ofereça um campo para listar grupos e permita que o administrador escolha quais grupos deseja associar à nova turma.
 - A inclusão de grupos de alunos não precisa ser obrigatória; deve ser opcional.
 
-![Alt Text](epic2-hist2.png)
+![Alt text](./imgs/epic2-hist2.png)
 
 #### Backend:
 
@@ -521,7 +526,7 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 - Ofereça a capacidade de adicionar novos grupos de alunos à turma ou editar grupos existentes.
 - Todos os componentes da tela devem ter IDs que podem ser mapeados aos IDs da turma.
 
-![Alt Text](epic2-hist3.png)
+![Alt text](./imgs/epic2-hist3.png)
 
 #### Backend:
 
@@ -549,7 +554,7 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 - Implemente um ícone de exclusão para cada turma na interface do usuário.
 - Quando o ícone de exclusão for clicado, ele deverá acionar uma confirmação do administrador antes de prosseguir com a exclusão.
 
-![Alt Text](epic2-hist4.png)
+![Alt text](./imgs/epic2-hist4.png)
 
 #### Backend:
 
@@ -564,7 +569,8 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 4. Após a confirmação, o frontend envia uma solicitação HTTP DELETE para a rota de API correspondente, por exemplo, `/api/turmas/excluir/{id}`.
 5. O módulo `gerenciador_turmas.py` no backend processa a solicitação e exclui a turma especificada do sistema.
 
-## Épico 6: Configurações Globais 🔴
+## Épico 6: Configurações Globais
+🔴 Prioridade Alta
 
 ### História de Usuário 1: Visualizar Parâmetros Globais
 
@@ -574,7 +580,7 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 
 - Crie um template HTML que permita ao administrador visualizar os parâmetros globais, incluindo a quantidade de sprints e o tempo de cada sprint.
 - Exiba essas informações em uma interface de usuário clara e legível.
-  ![Alt Text](epic6-hist1.png)
+  ![Alt text](./imgs/epic6-hist1.png)
 
 #### Backend:
 
@@ -599,7 +605,7 @@ Este arquivo contém informações sobre as turmas, identificadas por números. 
 - Implemente uma validação para garantir que os campos sejam preenchidos antes de permitir a submissão do formulário.
 - Inclua um botão que permitirá ao administrador escrever as configurações atualizadas no arquivo `configuracoesglobais.json` por meio de um pedido HTTP POST.
 
-![Alt Text](epic6-hist2.png)
+![Alt text](./imgs/epic6-hist2.png)
 
 #### Backend:
 

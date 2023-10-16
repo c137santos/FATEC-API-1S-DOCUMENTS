@@ -33,7 +33,7 @@ git remote add upstream https://github.com/ClaraSantosmf/FATEC-API-1-SEMESTRE
 
 Agora seu repositório está dessa forma. 
 
-![Alt text](image-1.png)
+![Alt text](./imgs/image-1.png)
 
 git push e git pull enviarão as modificações para seu fork. 
 git pull upstream vai trazer as informações do repositório original.
@@ -48,7 +48,7 @@ git ls-remote
 
 Deve haver um retorno desse estilo
 
-![Alt text](image-2.png)
+![Alt text](./imgs/image-2.png)
 
 A partir disso, vamos criar uma branch que será sincronizada direta com a upstream. 
 

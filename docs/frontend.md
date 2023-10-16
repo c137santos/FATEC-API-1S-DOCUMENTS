@@ -2,7 +2,7 @@
 
 Para dar noção do nosso projeto, nós desenhamos todas as telas que imaginamos ser necessárias a partir do nosso backlog inicial e os requisitos. 
 ## Wireframe e fluxos do produto
-![Alt text](image-7.png)
+![Alt text](./imgs/image-7.png)
 
 Épico 1: Exportação de Dados
 
