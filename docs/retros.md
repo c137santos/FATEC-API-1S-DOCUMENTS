@@ -36,7 +36,30 @@ as coisas. Definir tarefas.
 
 
 ## Retro - 17 de outubro de 2023
-### Problemas e pontos de melhorias que tiveram:
+
+**Problemas**
+
+**Caio**: Melhorar estratégia para ter menos conflito ao final.
+**Mateus**: Sentimos falta do William.
+**Marília**: Não resolveram os conflitos, teve muito CR de uma vez, saimos muito do escopo do card.
+**Eruano**: Ritmo diferente, precisa de espaço para desenvolver a task.
+**Danielle**: Ritmo diferente, precisa de espaço para desenvolver a task.
+**Ruth**: Faltou mais descrição no INDEX
+**Sara**: Nenhuma.
+
+**Coisas Boas**
+
+**Caio**: Foi mais fluído
+**Mateus**: Foi mais fluído
+**Marília**: Todo mundo aprendeu bastante!
+**Eruano**: Equipe está bem integrada
+**Danielle**: Tudo fluiu melhor e pareceu mais claro as tasks.
+**Ruth**: Faltou mais descrição no INDEX
+**Sara**: Nenhum. 
+
+
+### Manias que não podemos mais ter! 
+Cheia de manias, toda dengosaaaaaa, menina linda, sabe que não pode gerar débito técnico
 
 #### Resolva seu conflito. 
 
