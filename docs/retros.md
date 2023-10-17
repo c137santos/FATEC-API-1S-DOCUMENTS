@@ -86,6 +86,11 @@ Agora, quando se trata de métodos, usem verbos. Eles denotam ações dos objeto
 
 Claro, nós sabemos que às vezes as coisas podem ficar um pouco confusas. Alguns de nós pensam que devem usar o infinitivo o tempo todo. Você sabe, algo como "criar_turma()" para uma função. Mas vamos dar um passo para trás e manter as coisas simples. Vamos verbo conjugado no presente? criando_turma(). Tudo bem? 
 
+#### Dar nome as API ou URLs segundo o padrão proposto.
+
+Existiram muitas propostas de nome para API, mas agora definimos uma forma melhor de configurar um nome! Por favor, [sigamos](backend.md#urls)
+
+
 #### Colocar as funções no lugar correto
 
 Se a função altera ou cria grupo, ela precisa estar no módulo correto de grupo! Vai usar a função que altera ou cria grupo? Importa a função. MESMO que mockada. 
