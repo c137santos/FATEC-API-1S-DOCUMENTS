@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Fatequinha</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href=".">Fatequinha</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="biblioteca/" class="nav-link">Biblioteca</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="roadmap/" class="nav-link">Roadmap</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="backend/" class="nav-link">Backend</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="frontend/" class="nav-link">Frontend</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="sprints/" class="nav-link">Sprints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="retros/" class="nav-link">Retros</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="biblioteca/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#bem-vindo-a-nossa-documentacao-da-api-do-team-bee" class="nav-link">Bem vindo a nossa documentação da API do Team Bee!</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#roadmap-sobre-os-principais-assuntos-a-serem-estudados" class="nav-link">Roadmap sobre os principais assuntos a serem estudados:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#o-que-voce-vai-encontrar-nessa-documentacao" class="nav-link">O que você vai encontrar nessa documentação?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#metodologias-ageis-scrum" class="nav-link">Metodológias ágeis - scrum</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#commandos-para-rodar-essa-documentacao-localmente" class="nav-link">Commandos para rodar essa documentação localmente</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="bem-vindo-a-nossa-documentacao-da-api-do-team-bee">Bem vindo a nossa documentação da API do Team Bee!</h1>
+<p>Essa documentação foi inteiramente escrita em mkdocs! Para visitar como ela funciona, você pode visitar essa doc! <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<h2 id="roadmap-sobre-os-principais-assuntos-a-serem-estudados">Roadmap sobre os principais assuntos a serem estudados:</h2>
+<p>Uma das principais dúvidas da equipe é: "por onde eu começo?". Diante disso, desenvolvemos um roadmap dos conhecimentos mínimos para dar o ponta pé inicial!
+<a href="roadmap/">Roadmap</a></p>
+<h2 id="o-que-voce-vai-encontrar-nessa-documentacao">O que você vai encontrar nessa documentação?</h2>
+<h3 id="backend">Backend</h3>
+<ul>
+<li><a href="backend/#wgsi">Implementação do WSGI PEP333</a></li>
+</ul>
+<h3 id="frontend">Frontend</h3>
+<ul>
+<li><a href="frontend/#wireframe-e-fluxos-do-produto">Wireframe e fluxos do produto</a></li>
+</ul>
+<h3 id="biblioteca">Biblioteca</h3>
+<p>Nessa biblioteca você vai encontrar nossas funções documentadas profundamente. 
+Além disso, materiais importante para compreender o funcionamento técnico do nosso projeto.</p>
+<ul>
+<li>Git e github. Como você pode puxar atualizações e commitar no local correto?<ul>
+<li><a href="biblioteca/#como-fazer-o-pull-request-no-local-correto">Como fazer o pull request no local correto.</a></li>
+<li><a href="biblioteca/#como-se-fosse-a-primeira-vez-configurando-upstream">Como se fosse a primeira vez: configurando upstream</a></li>
+<li><a href="biblioteca/#depois-de-ter-branch-s-01-criada">Depois de ter branch s-01 criada!</a></li>
+</ul>
+</li>
+<li>Configurações do projeto. Como consigo rodar esse projeto na minha máquina?<ul>
+<li><a href="biblioteca/#virtualenvs">Virtualenvs</a></li>
+<li><a href="biblioteca/#instale-o-pyenv">Instale o pyenv</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="metodologias-ageis-scrum">Metodológias ágeis - scrum</h2>
+<p>O documento que regeu o manifesto ágil possui 12 princípios. Leia sempre que tiver dúvida se a equipe ou você está indo bem!</p>
+<p>Maior prioridade A satisfação do cliente somados as entregas parciais e contínuas do software, de forma adianta e com valor agredado. Não há foco em documentações rígidas, e sim na iteração constante com o cliente.</p>
+<p>Mudanças são bem vindas. O início do desenvolvimento de software é dificil identificar todos os requisitos. O software precisa amadurecer e o cliente muitas vezes não consegue prever todas as suas necessidades antes de ter uma versão funcional do software. O método ágil adota a filosofia de que mudanças feitas mais tarde no processo não são prejudiciais. Além dissotodas as mudanças que contribuem para a melhoria do software dentro das necessidades do cliente são bem-vindas.</p>
+<p>Entregas frequentes As entregas devem ser frequentes, de funcionalidades que estejam usáveis no ideal do MVP (mínimo produto viável).Periodicidade de tempo de entregas rápidas dão um ritmo ao trabalho da equipe de desenvolvimento. Atrasos de entrega constantem denúnciam a falência dos prazos.</p>
+<p>Equipe única de negócios e desenvolvedores Um dos princípios da abordagem ágil é ter uma equipe única de negócios e desenvolvedores, pois o trabalho conjunto das pessoas de negócio com os desenvolvedores é importante para manter a mesma comunicação durante todo o projeto. Portanto, PO e SM codam também.</p>
+<p>Motivação Equipe motivada é sinal de qualidade no proeto. É necessário que haja uma confiança na equipe para o desenvolvimento do trabalho que precisa ser realizado. Na abordagem ágil as equipes ágeis são autogerenciadas, com uma comunicação direta e constante com feedbacks frequentes com o comprometimento de todos os envolvidos para a entrega.</p>
+<p>Conversa frente a frente. Um dos princípios do manifesto ágil é a conversa frente a frente, face a face, presencial. É um método eficiente e eficaz para a transmissão de qualquer informação para a equipe e entre as equipes de desenvolvimento do software.. Os feedbacks devem ser diretos e na cara.</p>
+<p>Software Funcional É preciso garantir enregas ao fim da sprint. Um dos princípios do manifesto ágil é a entrega de um software funcional em várias etapas até a entrega do projeto final do software que está sendo desenvolvido.</p>
+<p>Desenvolvimento sustentável Para garantir um desenvolvimento sustentável no método ágil, é importante evitar a produtividade por horas de trabalho, o que cansa o desenvolvedor, porém, valorizando a produtividade pela capacidade criativa na execução.</p>
+<p>Agilidade É importante direcionar a atenção às necessidades de mudança e evitar documentações extensas.</p>
+<p>Simplicidade Criação e a entrega de um software de qualidade que resolve as necessidades do cliente. Isso é realmente essencial? É possível torná-lo simples? As respostas de perguntas como essas direcionam o desenvolvimento do software para a sua simplicidade.</p>
+<p>Times Auto Organizáveis Buscar por um conjunto restrito e muito simples de regras que deve ser obedecido por todos os membros da equipe.</p>
+<p>Reflexões regulares Compreender o processo em que está o desenvolvimento do software, assim como velocidade e dinamismo da equipe e cada um dos seus membros. Em conversas francas e dinâmicas de grupo.</p>
+<h2 id="commandos-para-rodar-essa-documentacao-localmente">Commandos para rodar essa documentação localmente</h2>
+<ul>
+<li><code>mkdocs serve</code> - Inicia o projeto na sua máquina</li>
+<li><code>mkdocs build</code> - Constroi a documentação</li>
+<li><code>mkdocs -h</code> - Devolve comandos de ajuda </li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2023-10-17 22:01:12.090907+00:00
+-->

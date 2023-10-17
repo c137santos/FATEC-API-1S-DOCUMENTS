@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Biblioteca - Fatequinha</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="..">Fatequinha</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Biblioteca</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../roadmap/" class="nav-link">Roadmap</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../backend/" class="nav-link">Backend</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../frontend/" class="nav-link">Frontend</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../sprints/" class="nav-link">Sprints</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../retros/" class="nav-link">Retros</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../roadmap/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#como-fazer-o-pull-request-no-local-correto" class="nav-link">Como fazer o pull request no local correto.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#pull-request-e-code-review-como-fazer-boas-constribuicoes" class="nav-link">Pull Request e Code Review. Como fazer boas constribuições?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#como-configurar-o-projeto" class="nav-link">Como configurar o projeto?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#diferenca-entre-json-e-csv" class="nav-link">Diferença entre JSON e CSV</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#comandos-para-executar-o-clone-no-git" class="nav-link">Comandos para executar o clone no git</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="como-fazer-o-pull-request-no-local-correto">Como fazer o pull request no local correto.</h2>
+<p>Devido a orientação do professor, não vamos poder commitar na MAIN. 
+Dessa forma, vamos fazer uma branch por sprint.
+Nossa primeira sprint vai ter a branch.</p>
+<pre><code>
+S-01/main-primeira-sprint
+
+</code></pre>
+<h3 id="como-se-fosse-a-primeira-vez-configurando-upstream">Como se fosse a primeira vez: configurando upstream</h3>
+<p>a) Conectando o repositório original na upstream</p>
+<p>É preciso entender que seu código habitará, em pelo menos, três arquivos. 
+- Na sua máquina, chamada de local.
+- No seu repositório remoto. Seu fork.
+- No repositório original, upstream</p>
+<p>Para que todos tenham as modificações de todos, o caminho para puxar atualizações sempre será upstream &gt; fork &gt; repositório local.</p>
+<p>Avô -&gt; pai -&gt; filho. </p>
+<p>Não é uma boa ideia puxar modificações de avô direto para filho, tá!</p>
+<p>No seu repositório local, será necessário indicar quem será a upstream, ou seja, a upstream é a ligação direta com projeto original.</p>
+<pre><code>git remote add upstream https://github.com/ClaraSantosmf/FATEC-API-1-SEMESTRE
+</code></pre>
+<p>Agora seu repositório está dessa forma. </p>
+<p><img alt="Alt text" src="../imgs/image-1.png" /></p>
+<p>git push e git pull enviarão as modificações para seu fork. 
+git pull upstream vai trazer as informações do repositório original.</p>
+<p>Mas por que não posso fazer git push upstream? Porque upstream não autoriza pull de repositório original. </p>
+<p>Agora, com o comando para listar os nomes das branchs da upstream.</p>
+<pre><code>git ls-remote 
+</code></pre>
+<p>Deve haver um retorno desse estilo</p>
+<p><img alt="Alt text" src="../imgs/image-2.png" /></p>
+<p>A partir disso, vamos criar uma branch que será sincronizada direta com a upstream. </p>
+<p>Como você já sabe, nossa primeira sprint será a partir da S-01/main-primeira-sprint</p>
+<p>b) criando sua branch para copiar a upstream. </p>
+<p>Você não deve fazer alterações direto na upstream, então vamos copia-la!</p>
+<pre><code>git switch -c S-01/main-primeira-sprint
+</code></pre>
+<p>O que isso faz? Cria uma nova branch local chamada S-01/main-primeira-sprint. Faz o checkout daquela branch. Faz o pull das alterações de origin/S-01/main-primeira-sprint para aquela branch</p>
+<p>c) Puxando alterações da upstream. </p>
+<p>Agora você deve puxar as atualizações da upstream. </p>
+<pre><code>git pull upstream S-01/main-primeira-sprint
+
+</code></pre>
+<p>Agora sua branch trará todas as atualização dessa branch da upstream. É a partir dessa branch atualizada, que você deve criar suas branchs!</p>
+<h3 id="depois-de-ter-branch-s-01-criada">Depois de ter branch s-01 criada!</h3>
+<p>Primeira opção para sincronizar seu projeto - syncfork</p>
+<p>Entrou para trabalhar e precisa puxar atualizações dos colegas? Simples. </p>
+<p>Abra seu repositório no GitHub</p>
+<p>No seu Repositório mude para a branch : S-02/main-segunda-sprint</p>
+<p>Sincronize seu Fork:
+<img alt="Alt text" src="../imgs/fork.jpeg" /></p>
+<p>Abra seu projeto na máquina. NO SEU VSCode, no seu projeto! Mude para branch S-02/main-segunda-sprint, abra o terminal e rode o comando</p>
+<pre><code>git pull
+</code></pre>
+<p>É possível que nesse passo você tenha que lidar com alguns conflitos. Resolva-os com calma!
+Agora mude para a branch que esta trabalhando na sua máquina, use o comando git merge no terminal:</p>
+<pre><code>git merge S-02/main-segunda-sprint
+</code></pre>
+<p>É possível que nesse passo você tenha que lidar com alguns conflitos. Resolva-os com calma!</p>
+<p>Depois disso, agora a branch que esta trabalhando na sua máquina esta sincronizada com as branch S-02/main-segunda-sprint.
+Seu VSCode vai sugerir que você commite as mudanças, e isso é importante!</p>
+<pre><code>git push
+</code></pre>
+<h3 id="outra-opcao-de-sincronizacao-upstream-sem-precisar-sincronizar-o-fork">Outra opção de sincronização: upstream - sem precisar sincronizar o fork</h3>
+<p>No seu projeto, com comandos apenas do terminal, comece indo para a branch principal da sprint. Nesse exemplo, a S-02!</p>
+<pre><code>git switch S-02/main-primeira-sprint
+</code></pre>
+<p>Rode o comando para trazer as atualizações.</p>
+<pre><code>git pull upstream S-01/main-primeira-sprint
+
+</code></pre>
+<p>Agora mude para sua branch de trabalho. Vou usar a minha como exemplo que é a branch "Santos/implementando-WSGI"</p>
+<pre><code>git switch Santos/implementandoW-WSGI
+</code></pre>
+<p>E agora o comando de mergear (misturar atualizações com seu código)</p>
+<pre><code>git merge S-01/main-primeira-sprint
+</code></pre>
+<p>Tudo certo e nada errado! Você tem uma branch na sua última versão. </p>
+<h2 id="pull-request-e-code-review-como-fazer-boas-constribuicoes">Pull Request e Code Review. Como fazer boas constribuições?</h2>
+<p>Passos para contribuir:</p>
+<pre><code>while projeto == inacabado:
+    1- Atualize a main
+    2- Crie sua branch
+    3- Realize commites atômicos
+    4- Realize um push para criar um PR
+    5- Peça codeReview
+    6- Faça os reparos necessários no CodeReview
+    7- Seja aprovado e mergeado
+</code></pre>
+<h3 id="o-que-e-pull-request">O que é pull request?</h3>
+<p><strong>Pull Request</strong> é a nossa forma de contribuição o projeto. Sugerimos a leitura dessa <a href="https://www.digitalocean.com/community/tutorials/como-criar-um-pull-request-no-github-pt">documentação</a> especifica sobre como contribuir em um projeto GitHub.</p>
+<p>Para algo de consulta rápida e explicações breve para o dia a dia, deixo esse <a href="https://medium.com/@clarasantosmf/subindo-altera%C3%A7%C3%B5es-para-github-68a0b28f14d">Medium</a>.</p>
+<h3 id="o-que-e-code-review">O que é code review?</h3>
+<p>O <strong>Code Review</strong>  é um processo no fluxo de desenvolvimento de software. Alguém propõe alterações ou criação no código por meio de um <em>pull request</em> (PR) e é analisado por outras pessoas.
+Isso ajuda identificar bugs e melhora a qualidade das implementações e compartilhar conhecimento.</p>
+<p>A responsabilidade de manter o CR em dia é de todos. Todos podem fazer e opinar.</p>
+<h3 id="boas-praticas">Boas práticas</h3>
+<aside>
+💡 Antes de revisar o código, tenha como premissa que o autor do **PR** fez o seu melhor em prol de solucionar o problema.
+
+</aside>
+
+<h3 id="revisor"><strong>Revisor</strong></h3>
+<p>Leia a descrição do PR, deve estar descrito o problema que a implementação se propõe resolver. Não encontrou na descrição do PR? Peça para que o autor ajuste isso e dedique um tempo para entender o contexto e as motivações das mudanças.</p>
+<p>Faça comentários através de observações, impactos, requisições e perguntas. Exemplos:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>❌ ☹️</th>
+<th>✅ 😀</th>
+<th>Por quê?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Observação</td>
+<td>Você está fazendo uma implementação errada.</td>
+<td>Essa implementação está repetida em outro contexto e poderia ser reutilizada. $LINK</td>
+<td>A revisão é sobre o código, nunca sobre o autor. Fornecer links, quando possível, de certa forma é uma gentileza e ajuda o autor a entender seu ponto de vista. Sugerir rápidas edições pode ajudar também.</td>
+</tr>
+<tr>
+<td>Impacto</td>
+<td>Essa implementação não está clara.</td>
+<td>Essa implementação não deixa claro o objetivo do método por X motivo.</td>
+<td>Explicar o impacto permite que o autor entenda a motivação da sua observação e não desvaloriza o trabalho que já foi feito.</td>
+</tr>
+<tr>
+<td>Requisição</td>
+<td>- Use o padrão X. Faça Y.</td>
+<td>Para esse cenário eu sugiro fazer/usar X, por N motivos</td>
+<td>Um ponto de vista mais pessoal se aproxima da forma com que conversamos no dia a dia, afirmações no imperativo podem soar rudes. Explicar o motivo da requisição encoraja a colaboração.</td>
+</tr>
+<tr>
+<td>Pergunta</td>
+<td>Por que você não faz X?</td>
+<td>O que você acha de fazer X? Pode ajudar em Y.</td>
+<td>Por meio das respostas, podemos entender melhor a decisão para certo ponto do código.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Entenda que existem diferentes soluções para o mesmo problema:<ul>
+<li>Nem sempre a melhor solução é a que você esta propondo;</li>
+<li>Com o time, chegue na melhor solução para o problema com o atual conhecimento deles;</li>
+</ul>
+</li>
+<li>Tenha claro a distinção entre <strong>boas práticas</strong> e <strong>gosto pessoal</strong>;</li>
+<li>Deixe claro quais comentários são “bloqueantes” (não vai subir sem que aquilo seja ajustado) e você espera que haja uma alteração significativa.</li>
+<li>Se sua revisão possui apenas pequenos apontamentos que podem ser facilmente resolvidos, considere aprovar a solicitação e orientar o autor sobre isso nos comentários, de modo que ele não precise aguardar novamente.</li>
+<li>Se você acredita que PR está muito grande, explique o motivo e incentive o autor a dividi-lo em menores partes.</li>
+<li>Não foque em deixar o PR excelente (A+), mas em melhorá-lo a ponto de ficar MVP e planeje evoluções futuras.</li>
+<li>Antes de enviar o comentário de CR se pergunte:<ul>
+<li>A afirmação é verdadeira?</li>
+<li>O comentário está agregando valor para o PR (principalmente se estamos contribuindo com o conhecimento do time e pessoa que abriu PR)?</li>
+<li>Estou sendo gentil?</li>
+</ul>
+</li>
+</ul>
+<h3 id="autor"><strong>Autor</strong></h3>
+<p>Assuma como premissa que o revisor está querendo contribuir e tenha humildade para ouvir sobre o seu trabalho. <strong>Você e o revisor são do mesmo time</strong>.</p>
+<h3 id="voce-deve">Você deve ✅</h3>
+<ul>
+<li>Dar o máximo de contexto ao abrir um PR, lembre-se que o revisor não tem tanto contexto quanto você. Escreva uma boa descrição ou deixe um link nela.</li>
+<li>Encarar a revisão como aprendizado.</li>
+<li>Entender que somos sempre enviesados pelo nosso próprio código.</li>
+<li>Estar aberto a opiniões externas: seu código não é seu "bichinho de estimação".</li>
+<li>Entender que é normal ter bugs, implementações melhores ou esquecer de algum detalhe.</li>
+</ul>
+<h3 id="nao-deve">Não deve ❌</h3>
+<ul>
+<li>Encarar comentários como crítica pessoal;</li>
+<li>Levar críticas para o lado pessoal, <strong>você não é o seu código</strong>;</li>
+</ul>
+<h3 id="codigo"><strong>Código</strong></h3>
+<ul>
+<li>Simples é melhor do que complexo: cuidado com <strong>over-engineering</strong> <em>(implemente o que você realmente precisa, não tente adivinhar o que você vai precisar no futuro);</em></li>
+<li>Antes de aplicar um <strong>design pattern</strong>, tenha claro qual problema ele resolve e qual ele não resolve, para não cair em <em>~~anti-pattern~~</em> sem saber <em>(<a href="https://pragprog.com/titles/mnee2/release-it-second-edition/">📖 livro</a>)</em>;</li>
+</ul>
+<h3 id="checklist">Checklist</h3>
+<p>Ao revisar um código, é bom (para o autor e para o revisor) ter um checklist do que precisa ser avaliado. Conferir todos os aspectos do código de uma vez pode ser exaustivo e propenso a falhas, portanto é bom atentar-se a um tópico e validar todo conteúdo sob aquela ótica.</p>
+<ul>
+<li>[ ]  Entendi o problema?</li>
+<li>[ ]  Entendi o que o código está fazendo?</li>
+<li>[ ]  O código atende todos os requisitos de implementação?</li>
+<li>[ ]  A implementação resolve o problema apresentado ou está claro como mediremos isso?</li>
+<li>[ ]  A descrição da PR/commit está conforme a implementação feita?</li>
+<li>[ ]  Atenção a sintaxe, não tem nenhum <em>code smells/</em>indícios de um problema mais profundo?</li>
+<li>[ ]  As exceções necessárias foram tratadas?</li>
+<li>[ ]  Alguma documentação adicional precisa ser feita?</li>
+</ul>
+<h3 id="referencias"><strong>Referências</strong></h3>
+<ul>
+<li><a href="https://phauer.com/2018/code-review-guidelines/">Code Review Guidelines for Humans</a></li>
+<li><a href="https://stackoverflow.blog/2019/09/30/how-to-make-good-code-reviews-better/">How to Make Good Code Reviews Better - Stack Overflow Blog</a></li>
+<li><a href="https://google.github.io/eng-practices/review/">Boas práticas de reviews</a></li>
+</ul>
+<h2 id="como-configurar-o-projeto">Como configurar o projeto?</h2>
+<p>Precisamos rodar nosso projeto na nossa máquina! Nisso, vamos configura-la de forma a conseguir exercutar o PBLTeX!</p>
+<h3 id="virtualenvs">Virtualenvs</h3>
+<p>A maneira mais fácil de todos terem as mesmas configurações do projeto na máquina é por meio de uma virtualenv. </p>
+<blockquote>
+<p>Aplicações em Python normalmente usam pacotes e módulos que não vêm como parte da instalação padrão. Aplicações às vezes necessitam uma versão específica de uma biblioteca, porque ela requer que algum problema em particular tenha sido consertado ou foi escrita utilizando-se de uma versão obsoleta da interface da biblioteca. A solução para este problema é criar um ambiente virtual, uma árvore de diretórios que contém uma instalação Python para uma versão particular do Python, além de uma série de pacotes adicionais. <a href="https://docs.python.org/pt-br/3/tutorial/venv.html">Virtualenvs - docs</a></p>
+</blockquote>
+<h4 id="instale-o-pyenv">Instale o pyenv</h4>
+<p>Use o pyenv para gerenciar as versões de Python e seus virtualenvs. Para instalar ele, use o <a href="https://github.com/pyenv/pyenv-installer">pyenv-installer</a>. No repositório tem as instruções detalhadas, mas talvez seja só isso aqui:</p>
+<pre><code class="language-shell">curl https://pyenv.run | bash
+</code></pre>
+<p>Reinicie o terminal e você já deve conseguir usar o pyenv.</p>
+<pre><code># Instale uma versão do 3.11.x.
+pyenv install 3.11.0
+# Crie um virtualenv buser com a versão que você acabou de instalar.
+pyenv virtualenv 3.11.0 PBLTeX
+</code></pre>
+<p>O arquivo <code>.python-version</code> já diz para o <code>pyenv</code> usar o env <code>PBLTeX</code> quando estiver na pasta do projeto.
+Ou seja, nosso ambiente vai ser sempre ativado automaticamente. Mas caso precise ativa-lo, sempre que quiser, pode fazer:</p>
+<pre><code>pyenv activate PBLTeX
+</code></pre>
+<p>Instale as dependências com os seguintes comandos:</p>
+<pre><code class="language-shell">pip install -r requirements.txt
+</code></pre>
+<p>Rode o projeto com:</p>
+<pre><code>python3 wgsi.py
+
+</code></pre>
+<p>Nesse momento, nosso servidor está fornecendo informações na porta :8080</p>
+<p>Porém, nosso frontend estará na porta:5500
+Então, para olhar o backend : http://127.0.0.1:8080/
+Para olhar para o frontend http://127.0.0.1:5500/</p>
+<h2 id="diferenca-entre-json-e-csv">Diferença entre JSON e CSV</h2>
+<p><a href="https://www.json.org/json-en.html">JSON (JavaScript Object Notation):</a> O JSON é um formato de dados que é comumente usado para trocar informações estruturadas entre sistemas. Ele é fácil de ler e escrever tanto para humanos quanto para máquinas. Um arquivo JSON possui as seguintes características:</p>
+<ul>
+<li>
+<p><strong>Sintaxe</strong>:</p>
+<ul>
+<li>O JSON é baseado em pares de chave-valor. Os dados são armazenados em um formato semelhante a um dicionário em Python ou um objeto em JavaScript.</li>
+<li>A chave é sempre uma string, seguida por dois pontos (<code>:</code>), e o valor pode ser de qualquer tipo de dado suportado pelo JSON (string, número, booleano, array, objeto, null).</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-json">{ 
+    &quot;nome&quot;: &quot;João&quot;,
+    &quot;idade&quot;: 30, 
+    &quot;casado&quot;: true, 
+    &quot;interesses&quot;: [&quot;música&quot;, &quot;viagem&quot;, &quot;esportes&quot;], 
+    &quot;endereço&quot;: { 
+        &quot;rua&quot;: &quot;123 Main Street&quot;, 
+        &quot;cidade&quot;: &quot;São Paulo&quot;, 
+        &quot;estado&quot;: &quot;SP&quot; 
+    }
+}
+</code></pre>
+<ul>
+<li>
+<p>Uso:</p>
+<ul>
+<li>O JSON é frequentemente usado para configurar aplicativos, transmitir dados pela web e armazenar informações estruturadas em arquivos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Vantagens</strong>:</p>
+<ul>
+<li>Suporta dados aninhados e estruturas complexas.</li>
+<li>Pode representar diferentes tipos de dados, como strings, números, listas, objetos, etc.</li>
+<li>É fácil de entender e ler.</li>
+<li>É usado para configurações de aplicativos e troca de dados entre sistemas.</li>
+</ul>
+</li>
+<li><strong>Desvantagens</strong>:<ul>
+<li>Pode ser menos eficiente em termos de espaço quando comparado ao CSV para grandes conjuntos de dados tabulares simples.</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://docs.python.org/3/library/csv.html">CSV (Comma-Separated Values):</a> O CSV é um formato simples para armazenar dados em formato tabular, onde as colunas são separadas por vírgulas e as linhas são separadas por quebras de linha. Cada linha representa um registro e cada campo (valor) é separado por uma vírgula.</p>
+<ul>
+<li>
+<p><strong>Sintaxe</strong>:</p>
+<ul>
+<li>Os valores são separados por vírgulas (daí o nome "Comma-Separated Values").</li>
+<li>Pode haver uma linha de cabeçalho que define os nomes das colunas.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-plaintext">Nome,Idade,Email
+Sara,30,saranahra@hotmail.com 
+Caio,33,caiopalma@gmail.com
+</code></pre>
+<ul>
+<li>
+<p>Uso:</p>
+<ul>
+<li>O CSV é comumente utilizado para armazenar e compartilhar dados tabulares, como planilhas ou conjuntos de dados estruturados. Ele é amplamente suportado por planilhas e aplicativos de banco de dados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Vantagens</strong>:</p>
+<ul>
+<li>É eficiente para grandes conjuntos de dados tabulares simples.</li>
+<li>É fácil de ser lido e editado em qualquer editor de texto.</li>
+<li>Amplamente suportado por planilhas e bancos de dados.</li>
+</ul>
+</li>
+<li><strong>Desvantagens</strong>:<ul>
+<li>Não suporta estruturas de dados complexas diretamente (como objetos aninhados).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Resumo:</strong>  A escolha entre JSON e CSV dependerá do tipo de dados que você está manipulando e das necessidades específicas do seu aplicativo ou uso. JSON é mais adequado para dados complexos e aninhados, enquanto CSV é excelente para dados tabulares simples e eficiência de armazenamento.</p>
+<p>https://docs.python.org/3/library/csv.html</p>
+<p>https://www.json.org/json-en.html</p>
+<h2 id="comandos-para-executar-o-clone-no-git">Comandos para executar o clone no git</h2>
+<h3 id="passo-1-pegando-o-link-do-repositorio">Passo 1: pegando o link do repositório</h3>
+<p>Ir no repositório do GitHub e clicar em "code", depois https e copiar o link.</p>
+<h3 id="passo-2-criando-uma-pasta-para-o-repositorio">Passo 2: criando uma pasta para o repositório</h3>
+<p>Ir no terminar (Windows Power Shell) e criar uma pasta:</p>
+<pre><code class="language-shell">mkdir Pasta
+cd Pasta
+</code></pre>
+<h3 id="passo-3-clonando-o-repositorio-e-abrindo-no-vscode">Passo 3: clonando o repositório e abrindo no VSCode</h3>
+<pre><code class="language-shell">git clone copiar-o-link-obtido-do-github
+cd nome-do-projeto
+git fetch origin
+git checkout -b nome-do-projeto origin/nome-do-projeto
+git branch -a
+git pull
+code .
+</code></pre>
+<h3 id="passo-4-comitando-no-repositorio-apos-as-alteracoes">Passo 4: comitando no repositório após as alterações</h3>
+<p>Após fazer as alterações no código seguir os proximos passos para comitar:</p>
+<pre><code class="language-shell">git add . 
+commit -m adicionar-novo-arquivo
+git push
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
