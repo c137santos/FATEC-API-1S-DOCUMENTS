@@ -53,3 +53,11 @@ api/v1/modulo/verbo/parâmetro(se houver)
 **VERBO** - ação que essa api faz: listar, deletar, atualizar, criar
 
 **PARÂMETRO** - não obrigatório, depende do endpoint mas o parâmetro mas deve ter o nome em PORTUGUÊS.
+
+**Padrão API RESTful**
+
+Esse padrão de URL segue a convenção para estruturar URLs em um sistema de API RESTful. Isso significa que /api/v1/turmas/listar ou /api/v1/turmas/editar/:id são caminhos claros e descritivos. Eles transmitem o propósito da chamada da API.
+
+/api/v1/turmas/listar/:id e /api/v1/grupos/listar também seguem a estrutura padrão e são facilmente compreensíveis.
+
+A inclusão de verbos na URL, como "listar" e "editar", é aceitável e ajuda a comunicar a intenção da operação que está sendo realizada. Além disso, a inclusão de "v1" na URL sugere uma versão específica da API, o que pode ser importante para manter o controle sobre as versões futuras.
